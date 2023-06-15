@@ -2,8 +2,24 @@
 
 Transform your text with the power of casing conventions.
 
+![demo for usage casing convention](assets/usage.gif)
+
 ## Usage
-![demo for usage casing convention](public/usage.gif)
+1. Install the Extension: Open the Extensions view in VS Code by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac). Search for the extension by name, "Casing Convention", and click on "Install" to install it.
+2. Select the Text to Convert: Ensure that the text you want to convert is selected in the editor.
+3. Open the Command Palette by pressing `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac).
+4. Type `casing` to filter the available commands.
+5. Select the desired conversion command from the list.
+6. The selected text will be transformed into the corresponding casing convention.
+
+Alternatively, you can also use your custom keyboard shortcuts associated with each command like :
+
+- Windows/Linux: `Ctrl + Shift + <keyboard-shortcut>`
+- Mac: `Cmd + Shift + <keyboard-shortcut>`
+
+However, you must first add [Extension Setting](#extension-setting) to your keyboard shortcut.
+
+Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) to create a custom keyboard shortcut
 
 ## Features
 
