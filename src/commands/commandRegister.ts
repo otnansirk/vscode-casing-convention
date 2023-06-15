@@ -11,15 +11,17 @@ import {
   sentenceCase,
   snakeCase
 } from "change-case";
-import { lowerCaseFirst } from "lower-case-first";
-import { upperCaseFirst } from "upper-case-first";
+import { lowerCaseFirst } from "../handler/lowerCaseFirst";
+import { upperCaseFirst } from "../handler/upperCaseFirst";
+import { titleCase } from "../handler/titleCase";
 import { commandHelp } from "./commandHelp";
 import { spongeCase } from "sponge-case";
-import { titleCase } from "title-case";
 import { lowerCase } from "lower-case";
 import { upperCase } from "upper-case";
 import { swapCase } from "swap-case";
 import commandProvider from "./commandProvider";
+import { kebabCase } from "../handler/kebabCase";
+import { screamKebabCase } from "../handler/screamKebabCase";
 
 
 type CommandType = {
@@ -160,7 +162,7 @@ const commandRegister: CommandType[] = [
     type: COMMAND_TYPE_HANDLER,
     name: 'casing-convention.lowerCaseFirst',
     label: 'lowerCaseFirst',
-    description: 'eXAMPLE sTRING',
+    description: 'eXAMPLE STRING',
     detail: 'Transforms the string with the first character in lower cased.',
     callback: commandProvider(lowerCaseFirst)
   },
@@ -187,6 +189,22 @@ const commandRegister: CommandType[] = [
     description: 'ExamPLE stRINg',
     detail: 'Transform into a string with random capitalization applied.',
     callback: commandProvider(spongeCase)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.kebabCase',
+    label: 'kebabCase',
+    description: 'example-string',
+    detail: 'Transform the string with lower case, and separated by dashes.',
+    callback: commandProvider(kebabCase)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.screamKebabCase',
+    label: 'screamKebabCase',
+    description: 'example-string',
+    detail: 'Transform the string with upper case, and separated by dashes.',
+    callback: commandProvider(screamKebabCase)
   }
 ];
 

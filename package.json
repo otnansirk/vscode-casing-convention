@@ -109,7 +109,7 @@
             },
             {
                 "command": "casing-convention.lowerCaseFirst",
-                "title": "casing: lOWER cASE fIRST"
+                "title": "casing: lOWER CASE FIRST"
             },
             {
                 "command": "casing-convention.upperCase",
@@ -117,7 +117,7 @@
             },
             {
                 "command": "casing-convention.upperCaseFirst",
-                "title": "casing: Upper Case First"
+                "title": "casing: Upper case first"
             },
             {
                 "command": "casing-convention.spongeCase",
@@ -126,6 +126,14 @@
             {
                 "command": "casing-convention.swapCase",
                 "title": "casing: SWap CacE"
+            },
+            {
+                "command": "casing-convention.kebabCase",
+                "title": "casing: kebab-case"
+            },
+            {
+                "command": "casing-convention.screamKebabCase",
+                "title": "casing: SCREAM-KEBAB-CASE"
             }
         ],
         "menus": {
@@ -138,79 +146,88 @@
             "casing-convention.menus": [
                 {
                     "command": "casing-convention.help",
-                    "group": "casing-convention.group@01"
+                    "group": "1_casing-convention.group@01",
+                    "title": "Help"
                 },
                 {
                     "command": "casing-convention.camelCase",
-                    "group": "casing-convention.group@01"
+                    "group": "2_casing-convention.group@01"
                 },
                 {
                     "command": "casing-convention.snakeCase",
-                    "group": "casing-convention.group@01"
+                    "group": "2_casing-convention.group@02"
                 },
                 {
                     "command": "casing-convention.capitalCase",
-                    "group": "casing-convention.group@01"
+                    "group": "2_casing-convention.group@03"
                 },
                 {
                     "command": "casing-convention.constantCase",
-                    "group": "casing-convention.group@02"
+                    "group": "2_casing-convention.group@04"
                 },
                 {
                     "command": "casing-convention.dotCase",
-                    "group": "casing-convention.group@03"
+                    "group": "2_casing-convention.group@05"
                 },
                 {
                     "command": "casing-convention.headerCase",
-                    "group": "casing-convention.group@04"
+                    "group": "2_casing-convention.group@06"
                 },
                 {
                     "command": "casing-convention.noCase",
-                    "group": "casing-convention.group@05"
+                    "group": "2_casing-convention.group@07"
                 },
                 {
                     "command": "casing-convention.paramCase",
-                    "group": "casing-convention.group@06"
+                    "group": "2_casing-convention.group@08"
                 },
                 {
                     "command": "casing-convention.pascalCase",
-                    "group": "casing-convention.group@07"
+                    "group": "2_casing-convention.group@09"
                 },
                 {
                     "command": "casing-convention.pathCase",
-                    "group": "casing-convention.group@08"
+                    "group": "2_casing-convention.group@10"
                 },
                 {
                     "command": "casing-convention.sentenceCase",
-                    "group": "casing-convention.group@09"
+                    "group": "2_casing-convention.group@11"
                 },
                 {
                     "command": "casing-convention.titleCase",
-                    "group": "casing-convention.group@10"
+                    "group": "2_casing-convention.group@12"
                 },
                 {
                     "command": "casing-convention.lowerCase",
-                    "group": "casing-convention.group@11"
+                    "group": "2_casing-convention.group@13"
                 },
                 {
                     "command": "casing-convention.lowerCaseFirst",
-                    "group": "casing-convention.group@12"
+                    "group": "2_casing-convention.group@14"
                 },
                 {
                     "command": "casing-convention.upperCase",
-                    "group": "casing-convention.group@13"
+                    "group": "2_casing-convention.group@15"
                 },
                 {
                     "command": "casing-convention.upperCaseFirst",
-                    "group": "casing-convention.group@14"
+                    "group": "2_casing-convention.group@16"
                 },
                 {
                     "command": "casing-convention.spongeCase",
-                    "group": "casing-convention.group@15"
+                    "group": "2_casing-convention.group@17"
                 },
                 {
                     "command": "casing-convention.swapCase",
-                    "group": "casing-convention.group@16"
+                    "group": "2_casing-convention.group@18"
+                },
+                {
+                    "command": "casing-convention.kebabCase",
+                    "group": "2_casing-convention.group@19"
+                },
+                {
+                    "command": "casing-convention.screamKebabCase",
+                    "group": "2_casing-convention.group@20"
                 }
             ]
         },
@@ -245,11 +262,8 @@
     "dependencies": {
         "change-case": "^4.1.2",
         "lower-case": "^2.0.2",
-        "lower-case-first": "^2.0.2",
         "sponge-case": "^1.0.1",
         "swap-case": "^2.0.2",
-        "title-case": "^3.0.3",
-        "upper-case": "^2.0.2",
-        "upper-case-first": "^2.0.2"
+        "upper-case": "^2.0.2"
     }
 }

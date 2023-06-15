@@ -17,8 +17,6 @@ export const commandHelp = async () => {
     await vscode.window.showQuickPick(items)
         .then(async command => {
           const picked: CommandType | undefined = commandRegister.find(item => (item.label === command?.label));
-          console.log("OKEE", picked);
-
           if (picked) {
             await picked.callback();
           }
