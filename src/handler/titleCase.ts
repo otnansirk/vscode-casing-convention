@@ -7,7 +7,7 @@ const SMALL_WORDS_EN = ['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'if', 
                       ];
 
 /**
- * Lower case the first character of an input string.
+ * Lower case the first character of an input string. case following Indonesia & English rules.
  */
 export function titleCase(str: string){
 

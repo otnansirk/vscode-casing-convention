@@ -139,7 +139,7 @@ const commandRegister: CommandType[] = [
     name: 'casing-convention.titleCase',
     label: 'titleCase',
     description: 'Example String',
-    detail: 'Transform a string into title case following English rules.',
+    detail: 'Transform a string into title case following Indonesia & English rules.',
     callback: commandProvider(titleCase)
   },
   {
