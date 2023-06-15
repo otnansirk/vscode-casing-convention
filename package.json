@@ -3,6 +3,19 @@
     "displayName": "casing convention",
     "description": "Transform your text with the power of casing convention.",
     "version": "0.0.1",
+    "icon": "assets/logo.png",
+    "galleryBanner": {
+        "color": "#042e00",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/otnansirk/vscode-casing-convention.git"
+    },
+    "bugs": {
+        "url": "https://github.com/otnansirk/vscode-casing-convention/issues"
+    },
+    "license": "MIT",
     "engines": {
         "vscode": "^1.79.0"
     },
@@ -12,7 +25,179 @@
     "activationEvents": [],
     "main": "./out/extension.js",
     "contributes": {
-        "commands": []
+        "commands": [
+            {
+                "command": "casing-convention.help",
+                "title": "casing: help",
+                "shortTitle": "help"
+            },
+            {
+                "command": "casing-convention.camelCase",
+                "title": "casing: camelCase",
+                "shortTitle": "camelCase"
+            },
+            {
+                "command": "casing-convention.snakeCase",
+                "title": "casing: snake_case",
+                "shortTitle": "snake_case"
+            },
+            {
+                "command": "casing-convention.capitalCase",
+                "title": "casing: Capital Case"
+            },
+            {
+                "command": "casing-convention.constantCase",
+                "title": "casing: CONSTANT_CASE"
+            },
+            {
+                "command": "casing-convention.dotCase",
+                "title": "casing: dot.case"
+            },
+            {
+                "command": "casing-convention.headerCase",
+                "title": "casing: Header-Case"
+            },
+            {
+                "command": "casing-convention.noCase",
+                "title": "casing: no case"
+            },
+            {
+                "command": "casing-convention.paramCase",
+                "title": "casing: param-case"
+            },
+            {
+                "command": "casing-convention.pascalCase",
+                "title": "casing: PascalCase"
+            },
+            {
+                "command": "casing-convention.pathCase",
+                "title": "casing: path/case"
+            },
+            {
+                "command": "casing-convention.sentenceCase",
+                "title": "casing: Sentence case"
+            },
+            {
+                "command": "casing-convention.titleCase",
+                "title": "casing: Title Case"
+            },
+            {
+                "command": "casing-convention.lowerCase",
+                "title": "casing: lower case"
+            },
+            {
+                "command": "casing-convention.lowerCaseFirst",
+                "title": "casing: lOWER cASE fIRST"
+            },
+            {
+                "command": "casing-convention.upperCase",
+                "title": "casing: UPPER CASE"
+            },
+            {
+                "command": "casing-convention.upperCaseFirst",
+                "title": "casing: Upper Case First"
+            },
+            {
+                "command": "casing-convention.spongeCase",
+                "title": "casing: spOngE cASe"
+            },
+            {
+                "command": "casing-convention.swapCase",
+                "title": "casing: SWap CacE"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "submenu": "casing-convention.menus",
+                    "when": "editorHasSelection"
+                }
+            ],
+            "casing-convention.menus": [
+                {
+                    "command": "casing-convention.help",
+                    "group": "casing-convention.group@01"
+                },
+                {
+                    "command": "casing-convention.camelCase",
+                    "group": "casing-convention.group@01"
+                },
+                {
+                    "command": "casing-convention.snakeCase",
+                    "group": "casing-convention.group@01"
+                },
+                {
+                    "command": "casing-convention.capitalCase",
+                    "group": "casing-convention.group@01"
+                },
+                {
+                    "command": "casing-convention.constantCase",
+                    "group": "casing-convention.group@02"
+                },
+                {
+                    "command": "casing-convention.dotCase",
+                    "group": "casing-convention.group@03"
+                },
+                {
+                    "command": "casing-convention.headerCase",
+                    "group": "casing-convention.group@04"
+                },
+                {
+                    "command": "casing-convention.noCase",
+                    "group": "casing-convention.group@05"
+                },
+                {
+                    "command": "casing-convention.paramCase",
+                    "group": "casing-convention.group@06"
+                },
+                {
+                    "command": "casing-convention.pascalCase",
+                    "group": "casing-convention.group@07"
+                },
+                {
+                    "command": "casing-convention.pathCase",
+                    "group": "casing-convention.group@08"
+                },
+                {
+                    "command": "casing-convention.sentenceCase",
+                    "group": "casing-convention.group@09"
+                },
+                {
+                    "command": "casing-convention.titleCase",
+                    "group": "casing-convention.group@10"
+                },
+                {
+                    "command": "casing-convention.lowerCase",
+                    "group": "casing-convention.group@11"
+                },
+                {
+                    "command": "casing-convention.lowerCaseFirst",
+                    "group": "casing-convention.group@12"
+                },
+                {
+                    "command": "casing-convention.upperCase",
+                    "group": "casing-convention.group@13"
+                },
+                {
+                    "command": "casing-convention.upperCaseFirst",
+                    "group": "casing-convention.group@14"
+                },
+                {
+                    "command": "casing-convention.spongeCase",
+                    "group": "casing-convention.group@15"
+                },
+                {
+                    "command": "casing-convention.swapCase",
+                    "group": "casing-convention.group@16"
+                }
+            ]
+        },
+        "submenus": [
+            {
+                "id": "casing-convention.menus",
+                "label": "Casing convention"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "yarn run compile",
