@@ -9,6 +9,8 @@ Transform your text with the power of casing conventions.
 
 ![demo for usage casing convention](assets/usage.gif)
 
+## Code Coverage
+
 ![Statements](#statements#)
 ![Branches](#branches#)
 ![Functions](#functions#)
