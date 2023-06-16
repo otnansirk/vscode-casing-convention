@@ -6,6 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [v1.0.0] - 2023-05-16
+
 ### Added
 - Add workflow: unit test and code coverage badge
 - Create handler: kebabCase, screamCase, lowerCaseFirst, titleCase, upperCaseFirst
@@ -15,3 +17,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Create README.md
 - Create LICENSE
 - Initial commit
+
+[Unreleased]: https://github.com/otnansirk/vscode-casing-convention/compare/v1.0.0...HEAD
+[v1.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.0.0
