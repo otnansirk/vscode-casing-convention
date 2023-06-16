@@ -36,5 +36,5 @@ jobs:
           git config --local user.email "codecov.actions@github.com"
           git config --local user.name "Codecov"
           git add README.md
-          git commit -m "Update codecov badge"
+          git diff --cached --exit-code || git commit -m "Update codecov badge"
           git push origin master
