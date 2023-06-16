@@ -14,7 +14,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Remove depedencies: lower-case-first, title-case, upper-case-first
 - Add all features to convert text.
 - This CHANGELOG file to hopefully serve as an evolving example of a standardized open source project CHANGELOG.
-- Create README.md
+- Create README
 - Create LICENSE
 - Initial commit
 

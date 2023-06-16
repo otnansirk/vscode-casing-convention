@@ -1,11 +1,6 @@
-<table>
-  <tr>
-    <td><img src="assets/logo.png" width="140"/></td>
-  </tr>
-</table>
-Transform your text with the power of casing conventions.
 
-# Casing Convention
+# VSCode Casing Convention
+Transform your text with the power of casing conventions.
 
 ![demo for usage casing convention](assets/usage.gif)
 
@@ -123,3 +118,14 @@ Your contributions are highly appreciated, and together we can make this project
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+<hr>
+
+<div align="center">
+    <table>
+    <tr>
+        <td><img src="assets/logo.png" width="100"/></td>
+    </tr>
+    </table>
+    Made with ❤️ love
+</div>
