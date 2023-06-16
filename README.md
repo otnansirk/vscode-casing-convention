@@ -4,6 +4,11 @@ Transform your text with the power of casing conventions.
 
 ![demo for usage casing convention](assets/usage.gif)
 
+![Statements](#statements#)
+![Branches](#branches#)
+![Functions](#functions#)
+![Lines](#lines#)
+
 ## Usage
 1. Install the Extension: Open the Extensions view in VS Code by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac). Search for the extension by name, "Casing Convention", and click on "Install" to install it.
 2. Select the Text to Convert: Ensure that the text you want to convert is selected in the editor.
@@ -59,6 +64,10 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **swapCase**: Convert text to `sWAPcASE`. This convention swaps the case of each letter in the text.
 
+- **kebabCase**: Convert text to `kebab-case`. Transform into a string to lowercase and the hyphen ("-") is used as a separator between words.
+
+- **screamKebabCase**: Convert text to `SCREAM-KEBAB-CASE`. The text is converted to uppercase letters, and the hyphen ("-") is used as a separator between words.
+
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
 ## Extension Setting
@@ -84,6 +93,8 @@ To use the extension, you can execute the following commands:
 - `casing-convention.upperCaseFirst`: Convert text to Uppercase First.
 - `casing-convention.spongeCase`: Convert text to SpOnGeCaSe.
 - `casing-convention.swapCase`: Convert text to sWAPcASE.
+- `casing-convention.kebabCase`: Convert text to kebab-case.
+- `casing-convention.screamKebabCase`: Convert text to SCREAM-KEBAB-CASE.
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.
