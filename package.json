@@ -241,7 +241,7 @@
         "pretest": "yarn run compile && yarn run lint",
         "lint": "eslint src --ext ts",
         "test": "mocha -r ts-node/register",
-        "cov": "nyc npm run test"
+        "cov": "nyc yarn run test && istanbul-badges-readme"
     },
     "devDependencies": {
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
@@ -254,6 +254,7 @@
         "@vscode/test-electron": "^2.3.2",
         "eslint": "^8.41.0",
         "glob": "^8.1.0",
+        "istanbul-badges-readme": "^1.8.5",
         "mocha": "^10.2.0",
         "nyc": "^15.1.0",
         "ts-node": "^10.9.1",
