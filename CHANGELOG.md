@@ -7,6 +7,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 ### Added
+- Add workflow: unit test and code coverage badge
 - Create handler: kebabCase, screamCase, lowerCaseFirst, titleCase, upperCaseFirst
 - Remove depedencies: lower-case-first, title-case, upper-case-first
 - Add all features to convert text.
