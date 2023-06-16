@@ -10,7 +10,7 @@ on:
 
 jobs:
   test-and-code-coverage:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -31,11 +31,10 @@ jobs:
         run: yarn cov
 
       - name: Commit and Push Changes
+        if: ${{ github.ref == 'refs/heads/master' && github.event_name == 'push' }}
         run: |
           git config --local user.email "codecov.actions@github.com"
           git config --local user.name "Codecov"
           git add README.md
           git commit -m "Update codecov badge"
-          git push
-
-
+          git push origin master
