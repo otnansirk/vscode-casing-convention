@@ -23,9 +23,9 @@
         "spOngE cASe",
         "SWap CacE"
     ],
-    "author": "otnansirk",
+    "publisher": "otnansirk",
     "version": "1.0.0",
-    "icon": "assets/logo.png",
+    "icon": "/assets/logo.png",
     "galleryBanner": {
         "color": "#042e00",
         "theme": "dark"
