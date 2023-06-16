@@ -9,10 +9,12 @@ Transform your text with the power of casing conventions.
 
 ![demo for usage casing convention](assets/usage.gif)
 
-![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat)
-![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat)
-![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat)
-![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat)
+## Code Coverage
+
+![Statements](#statements#)
+![Branches](#branches#)
+![Functions](#functions#)
+![Lines](#lines#)
 
 ## Usage
 1. Install the Extension: Open the Extensions view in VS Code by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac). Search for the extension by name, "Casing Convention", and click on "Install" to install it.
