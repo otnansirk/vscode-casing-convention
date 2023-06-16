@@ -241,9 +241,10 @@
         "pretest": "yarn run compile && yarn run lint",
         "lint": "eslint src --ext ts",
         "test": "mocha -r ts-node/register",
-        "coverage": "nyc -r lcov -e .ts -x \"*.spec.ts\" npm run test"
+        "cov": "nyc npm run test"
     },
     "devDependencies": {
+        "@istanbuljs/nyc-config-typescript": "^1.0.2",
         "@types/glob": "^8.1.0",
         "@types/mocha": "^10.0.1",
         "@types/node": "20.2.5",
