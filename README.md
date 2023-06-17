@@ -11,6 +11,9 @@ Transform your text with the power of casing conventions.
 ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat)
 ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat)
 
+
+<a href="https://www.producthunt.com/posts/vscode-casing-convention?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vscode&#0045;casing&#0045;convention" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=400069&theme=light" alt="VSCode&#0032;Casing&#0032;Convention - Transform&#0032;your&#0032;text&#0032;with&#0032;the&#0032;power&#0032;of&#0032;casing&#0032;conventions | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ## Usage
 1. Install the Extension: Open the Extensions view in VS Code by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac). Search for the extension by name, "Casing Convention", and click on "Install" to install it.
 2. Select the Text to Convert: Ensure that the text you want to convert is selected in the editor.
