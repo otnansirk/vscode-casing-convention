@@ -6,7 +6,7 @@ describe('json2PhpArray', function () {
   const TEST_CASES = [
     {
       input: "['name' => 'kris']",
-      expected: "{'name' : 'kris'}",
+      expected: "{'name': 'kris'}",
     },
     {
       input: "['name'=> 'kris']",
@@ -14,8 +14,16 @@ describe('json2PhpArray', function () {
     },
     {
       input: '["name" => "kris"]',
-      expected: '{"name" : "kris"}',
-    }
+      expected: '{"name": "kris"}',
+    },
+    {
+      input: "['name'=> true]",
+      expected: "{'name': true}",
+    },
+    {
+      input: '["name" => 123]',
+      expected: '{"name": 123}',
+    },
   ];
 
   TEST_CASES.forEach(({ input, expected }: any) => {

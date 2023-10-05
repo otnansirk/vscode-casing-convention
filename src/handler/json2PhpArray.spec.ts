@@ -11,6 +11,14 @@ describe('json2PhpArray', function () {
     {
       input: '{"name": "kris"}',
       expected: '["name" => "kris"]'
+    },
+    {
+      input: '{"name": 12}',
+      expected: '["name" => 12]'
+    },
+    {
+      input: '{"name": true}',
+      expected: '["name" => true]'
     }
   ];
 

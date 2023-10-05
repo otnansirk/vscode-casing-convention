@@ -4,9 +4,5 @@
 export const phpArray2Json = (str: string) => str
   .replaceAll('[', '{')
   .replaceAll(']', '}')
-  .replaceAll("'=>'", "': '")
-  .replaceAll("'=> '", "': '")
-  .replaceAll('"=>"', '": "')
-  .replaceAll('"=> "', '": "')
-  .replaceAll("=> {", ': {')
-  .replace(/\s=>\s+/g, ' : ');
+  .replace(/=>\s|\s=>\s|\s=>/g, ': ')
+  .replace(/"=>"|'=>'/g, '": "');
