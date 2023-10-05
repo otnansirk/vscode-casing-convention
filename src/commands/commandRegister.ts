@@ -22,6 +22,8 @@ import { swapCase } from "swap-case";
 import commandProvider from "./commandProvider";
 import { kebabCase } from "../handler/kebabCase";
 import { screamKebabCase } from "../handler/screamKebabCase";
+import { json2PhpArray } from "../handler/json2PhpArray";
+import { phpArray2Json } from "../handler/phpArray2Json";
 
 
 type CommandType = {
@@ -205,6 +207,22 @@ const commandRegister: CommandType[] = [
     description: 'example-string',
     detail: 'Transform the string with upper case, and separated by dashes.',
     callback: commandProvider(screamKebabCase)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.json2ArrayPHP',
+    label: 'json2ArrayPHP',
+    description: '["name" => "Kris"]',
+    detail: 'Transform the json to array PHP.',
+    callback: commandProvider(json2PhpArray)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.arrayPHP2Json',
+    label: 'json2ArrayPHP',
+    description: '{"name": "kris"}',
+    detail: 'Transform the array PHP to json.',
+    callback: commandProvider(phpArray2Json)
   }
 ];
 
