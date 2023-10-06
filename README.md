@@ -73,6 +73,10 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **screamKebabCase**: Convert text to `SCREAM-KEBAB-CASE`. The text is converted to uppercase letters, and the hyphen ("-") is used as a separator between words.
 
+- **json2ArrayPHP**: Convert json to array PHP
+  
+- **arrayPHP2Json**: Convert array PHP to json 
+
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
 ## Extension Setting
@@ -100,6 +104,8 @@ To use the extension, you can execute the following commands:
 - `casing-convention.swapCase`: Convert text to sWAPcASE.
 - `casing-convention.kebabCase`: Convert text to kebab-case.
 - `casing-convention.screamKebabCase`: Convert text to SCREAM-KEBAB-CASE.
+- `casing-convention.json2ArrayPHP`: Convert json to array php.
+- `casing-convention.arrayPHP2Json`: Convert array php to json.
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.
