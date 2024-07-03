@@ -1,6 +1,5 @@
 import {
   camelCase,
-  capitalCase,
   constantCase,
   dotCase,
   headerCase,
@@ -24,6 +23,7 @@ import { kebabCase } from "../handler/kebabCase";
 import { screamKebabCase } from "../handler/screamKebabCase";
 import { json2PhpArray } from "../handler/json2PhpArray";
 import { phpArray2Json } from "../handler/phpArray2Json";
+import { capitalCase } from "../handler/capitalCase";
 
 
 type CommandType = {
