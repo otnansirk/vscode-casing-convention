@@ -4,7 +4,6 @@ export const capitalCase = (text: string): string => {
     let isWordStart = true;
     
     for (const char of text) {
-        console.log(char, "KRIS")
         if (char === ' ' || char === '\n') {
             result += char;
             isWordStart = true;
