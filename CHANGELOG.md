@@ -6,6 +6,35 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+
+## [v1.2.2] - 2023-07-04
+
+### Fixed Bug
+- Text to numbered text line by lines
+
+
+## [v1.1.2] - 2023-07-03
+
+### Fixed Bug
+- Text to Capital case
+- Standard capitalization all selected text (Multi lines)
+
+
+## [v1.1.1] - 2023-10-05
+
+### Fixed Bug
+- Json to array PHP and the opposite
+- Can't format numeric value
+- Can't format boolean value
+
+
+## [v1.1.0] - 2023-10-05
+
+### New Features
+- json 2 php array
+- php array 2 json
+
+
 ## [v1.0.0] - 2023-05-16
 
 ### Added
@@ -20,3 +49,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 [Unreleased]: https://github.com/otnansirk/vscode-casing-convention/compare/v1.0.0...HEAD
 [v1.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.0.0
+[v1.1.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.0
+[v1.1.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.1
+[v1.1.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.2
+[v1.2.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.2.2
