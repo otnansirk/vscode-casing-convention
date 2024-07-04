@@ -73,9 +73,11 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **screamKebabCase**: Convert text to `SCREAM-KEBAB-CASE`. The text is converted to uppercase letters, and the hyphen ("-") is used as a separator between words.
 
-- **json2ArrayPHP**: Convert json to array PHP
+- **json2ArrayPHP**: Convert json to array PHP.
   
-- **arrayPHP2Json**: Convert array PHP to json 
+- **arrayPHP2Json**: Convert array PHP to json.
+
+- **enterNumberByLines**: Transform the text to numbered text line by line.
 
 These casing conventions provide flexible options to transform your text according to specific requirements.
 

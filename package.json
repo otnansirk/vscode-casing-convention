@@ -3,7 +3,7 @@
     "displayName": "Casing Convention",
     "description": "Transform your text with the power of casing convention.",
     "publisher": "otnansirk",
-    "version": "1.1.2",
+    "version": "1.2.2",
     "icon": "./assets/logo.png",
     "license": "MIT",
     "engines": {
@@ -175,6 +175,10 @@
             {
                 "command": "casing-convention.arrayPHP2Json",
                 "title": "casing: array PHP to json"
+            },
+            {
+                "command": "casing-convention.enterNumberByLines",
+                "title": "casing: Numbered text"
             }
         ],
         "menus": {

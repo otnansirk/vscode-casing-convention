@@ -24,6 +24,7 @@ import { screamKebabCase } from "../handler/screamKebabCase";
 import { json2PhpArray } from "../handler/json2PhpArray";
 import { phpArray2Json } from "../handler/phpArray2Json";
 import { capitalCase } from "../handler/capitalCase";
+import { numberedByLines } from "../handler/numberedByLines";
 
 
 type CommandType = {
@@ -223,6 +224,14 @@ const commandRegister: CommandType[] = [
     description: '{"name": "kris"}',
     detail: 'Transform the array PHP to json.',
     callback: commandProvider(phpArray2Json)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.enterNumberByLines',
+    label: 'enterNumberByLines',
+    description: '1. Hello casing convention',
+    detail: 'Transform the text to numbered text line by line.',
+    callback: commandProvider(numberedByLines)
   }
 ];
 
