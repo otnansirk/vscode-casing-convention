@@ -7,9 +7,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
-## [v1.2.2] - 2023-07-04
+## [v1.3.0] - 2024-07-12
 
-### Fixed Bug
+### New Features
+- JSON Stringify 
+- JSON Parse
+
+## [v1.2.2] - 2024-07-04
+
+### New Features
 - Text to numbered text line by lines
 
 
@@ -53,3 +59,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v1.1.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.1
 [v1.1.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.2
 [v1.2.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.2.2
+[v1.3.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.3.0
