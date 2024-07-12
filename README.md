@@ -79,6 +79,10 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **enterNumberByLines**: Transform the text to numbered text line by line.
 
+- **JSON Stringify**: Transform the JSON to text.
+
+- **JSON Parse**: Transform the JSON string to JSON.
+
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
 ## Extension Setting
@@ -107,7 +111,10 @@ To use the extension, you can execute the following commands:
 - `casing-convention.kebabCase`: Convert text to kebab-case.
 - `casing-convention.screamKebabCase`: Convert text to SCREAM-KEBAB-CASE.
 - `casing-convention.json2ArrayPHP`: Convert json to array php.
-- `casing-convention.arrayPHP2Json`: Convert array php to json.
+- `casing-convention.arrayPHP2Json`: Convert array to JSON.
+- `casing-convention.enterNumberByLines`: Add text number line by line.
+- `casing-convention.jsonStringify`: Convert JSON to JSON Stringify.
+- `casing-convention.jsonParse`: Convert JSON Stringify to JSON.
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.

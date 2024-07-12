@@ -1,5 +1,5 @@
 /**
- * Lower case the first character of an input string.
+ * Transfrom JSON to Array.
  */
 export const json2PhpArray = (str: string) => str
   .replaceAll('{', '[')

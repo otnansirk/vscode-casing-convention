@@ -170,15 +170,23 @@
             },
             {
                 "command": "casing-convention.json2ArrayPHP",
-                "title": "casing: json to array PHP"
+                "title": "casing: JSON to array PHP"
             },
             {
                 "command": "casing-convention.arrayPHP2Json",
-                "title": "casing: array PHP to json"
+                "title": "casing: array PHP to JSON"
             },
             {
                 "command": "casing-convention.enterNumberByLines",
                 "title": "casing: Numbered text"
+            },
+            {
+                "command": "casing-convention.jsonStringify",
+                "title": "casing: JSON Stringify"
+            },
+            {
+                "command": "casing-convention.jsonParse",
+                "title": "casing: JSON Parse"
             }
         ],
         "menus": {

@@ -25,6 +25,8 @@ import { json2PhpArray } from "../handler/json2PhpArray";
 import { phpArray2Json } from "../handler/phpArray2Json";
 import { capitalCase } from "../handler/capitalCase";
 import { numberedByLines } from "../handler/numberedByLines";
+import { jsonstringify } from "../handler/jsonstringify";
+import { jsonparse } from "../handler/jsonparse";
 
 
 type CommandType = {
@@ -232,7 +234,23 @@ const commandRegister: CommandType[] = [
     description: '1. Hello casing convention',
     detail: 'Transform the text to numbered text line by line.',
     callback: commandProvider(numberedByLines)
-  }
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.jsonStringify',
+    label: 'jsonStringify',
+    description: '"{\"kirs\": \"OKE\"}"',
+    detail: 'Transform the JSON to JSON string.',
+    callback: commandProvider(jsonstringify)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.jsonParse',
+    label: 'jsonParse',
+    description: '{"kirs": "OKE"}"',
+    detail: 'Transform the JSON string to JSON.',
+    callback: commandProvider(jsonparse)
+  },
 ];
 
 export default commandRegister;
