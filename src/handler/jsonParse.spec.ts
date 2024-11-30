@@ -1,7 +1,7 @@
 import { deepStrictEqual, throws } from "assert";
-import { jsonparse } from "./jsonparse"; // Ensure this path is correct
+import { jsonParse } from "./jsonParse"; // Ensure this path is correct
 
-describe('jsonparse', function () {
+describe('jsonParse', function () {
   const TEST_CASES = [
     {
       input: "{\"kirs\":\"OKE\"}",
@@ -18,9 +18,9 @@ describe('jsonparse', function () {
   TEST_CASES.forEach(({ input, expected, isThrow}) => {
     it(`Should convert ${input} to ${JSON.stringify(expected)}`, function () {
       if (isThrow) {
-        throws(() => jsonparse(input), new Error(expected));
+        throws(() => jsonParse(input), new Error(expected));
       } else {
-        let result = jsonparse(input);
+        let result = jsonParse(input);
         console.log(`${typeof(input)} to ${typeof(expected)} KRIS`);
         
         deepStrictEqual(result, expected);

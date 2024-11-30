@@ -1,7 +1,7 @@
 /**
  * Transfor String to JSON.
  */
-export const jsonparse = (str: string) => {
+export const jsonParse = (str: string) => {
     try {
         const text = JSON.parse(str).toString();
         if (text === '[object Object]') {
