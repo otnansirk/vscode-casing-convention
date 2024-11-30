@@ -26,7 +26,9 @@ import { phpArray2Json } from "../handler/phpArray2Json";
 import { capitalCase } from "../handler/capitalCase";
 import { numberedByLines } from "../handler/numberedByLines";
 import { jsonstringify } from "../handler/jsonstringify";
-import { jsonparse } from "../handler/jsonparse";
+import { jsonParse } from "../handler/jsonParse";
+import { jsonBeautify } from "../handler/jsonBeautify";
+import { jsonMinify } from "../handler/jsonMinify";
 
 
 type CommandType = {
@@ -249,7 +251,23 @@ const commandRegister: CommandType[] = [
     label: 'jsonParse',
     description: '{"kirs": "OKE"}"',
     detail: 'Transform the JSON string to JSON.',
-    callback: commandProvider(jsonparse)
+    callback: commandProvider(jsonParse)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.jsonBeautify',
+    label: 'jsonBeautify',
+    description: '{"hobies": ["music", "games"]}"',
+    detail: 'Transform the JSON to be more beautiful.',
+    callback: commandProvider(jsonBeautify)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.jsonMinify',
+    label: 'jsonMinify',
+    description: '{"hobies": ["music", "games"]}"',
+    detail: 'Transform the JSON to one line.',
+    callback: commandProvider(jsonMinify)
   },
 ];
 

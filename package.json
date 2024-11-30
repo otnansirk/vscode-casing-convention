@@ -187,6 +187,14 @@
             {
                 "command": "casing-convention.jsonParse",
                 "title": "casing: JSON Parse"
+            },
+            {
+                "command": "casing-convention.jsonBeautify",
+                "title": "casing: JSON Beautify"
+            },
+            {
+                "command": "casing-convention.jsonMinify",
+                "title": "casing: JSON Minify"
             }
         ],
         "menus": {
