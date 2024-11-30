@@ -29,6 +29,8 @@ import { jsonstringify } from "../handler/jsonstringify";
 import { jsonParse } from "../handler/jsonParse";
 import { jsonBeautify } from "../handler/jsonBeautify";
 import { jsonMinify } from "../handler/jsonMinify";
+import { json2ObjectJS } from "../handler/json2ObjectJS";
+import { objectJS2Json } from "../handler/objectJS2Json";
 
 
 type CommandType = {
@@ -268,6 +270,22 @@ const commandRegister: CommandType[] = [
     description: '{"hobies": ["music", "games"]}"',
     detail: 'Transform the JSON to one line.',
     callback: commandProvider(jsonMinify)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.json2ObjectJS',
+    label: 'json2ObjectJS',
+    description: '{hobies: ["music", "games"]}"',
+    detail: 'Transform the JSON to Object JS.',
+    callback: commandProvider(json2ObjectJS)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.objectJS2Json',
+    label: 'objectJS2Json',
+    description: '{hobies: ["music", "games"]}"',
+    detail: 'Transform the Object JS to JSON.',
+    callback: commandProvider(objectJS2Json)
   },
 ];
 

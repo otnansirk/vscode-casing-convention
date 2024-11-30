@@ -195,6 +195,14 @@
             {
                 "command": "casing-convention.jsonMinify",
                 "title": "casing: JSON Minify"
+            },
+            {
+                "command": "casing-convention.json2ObjectJS",
+                "title": "casing: JSON to Object JS"
+            },
+            {
+                "command": "casing-convention.objectJS2Json",
+                "title": "casing: Object JS to JSON"
             }
         ],
         "menus": {
