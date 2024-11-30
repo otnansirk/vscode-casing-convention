@@ -6,10 +6,10 @@ Transform your text with the power of casing conventions.
 
 ## Code Coverage
 
-![Statements](https://img.shields.io/badge/statements-96.95%25-brightgreen.svg?style=flat)
+![Statements](https://img.shields.io/badge/statements-94.64%25-brightgreen.svg?style=flat)
 ![Branches](https://img.shields.io/badge/branches-81.25%25-yellow.svg?style=flat)
-![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat)
-![Lines](https://img.shields.io/badge/lines-96.52%25-brightgreen.svg?style=flat)
+![Functions](https://img.shields.io/badge/functions-96.36%25-brightgreen.svg?style=flat)
+![Lines](https://img.shields.io/badge/lines-95.2%25-brightgreen.svg?style=flat)
 
 
 <a href="https://www.producthunt.com/posts/vscode-casing-convention?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vscode&#0045;casing&#0045;convention" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=400069&theme=light" alt="VSCode&#0032;Casing&#0032;Convention - Transform&#0032;your&#0032;text&#0032;with&#0032;the&#0032;power&#0032;of&#0032;casing&#0032;conventions | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
