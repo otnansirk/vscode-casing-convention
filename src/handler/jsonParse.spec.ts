@@ -4,27 +4,32 @@ import { jsonParse } from "./jsonParse"; // Ensure this path is correct
 describe('jsonParse', function () {
   const TEST_CASES = [
     {
+      input: "{\"name\":\"kris\"}",
+      expected: '{"name":"kris"}',
+    }
+  ];
+
+  const TEST_CASES_ERROR = [
+    {
       input: "{\"kirs\":\"OKE\"}",
       expected: "Failed to parse JSON",
-      isThrow: true
     },
     {
       input: `${"{\"kirs\":\"OKE\",\"name\":\"kris\"}"}`,
       expected: "Failed to parse JSON",
-      isThrow: true
     }
   ];
 
-  TEST_CASES.forEach(({ input, expected, isThrow}) => {
-    it(`Should convert ${input} to ${JSON.stringify(expected)}`, function () {
-      if (isThrow) {
-        throws(() => jsonParse(input), new Error(expected));
-      } else {
-        let result = jsonParse(input);
-        console.log(`${typeof(input)} to ${typeof(expected)} KRIS`);
-        
-        deepStrictEqual(result, expected);
-      }
+  TEST_CASES.forEach(({ input, expected}) => {
+    it(`Should convert ${input} to ${expected}`, function () {
+      let result = jsonParse(JSON.stringify(input));
+      deepStrictEqual(result, expected);
+    });
+  });
+
+  TEST_CASES_ERROR.forEach(({ input, expected}) => {
+    it(`Json Parse from ${input} should error : ${expected}`, function () {
+      throws(() => jsonParse(input), new Error(expected));
     });
   });
 });
