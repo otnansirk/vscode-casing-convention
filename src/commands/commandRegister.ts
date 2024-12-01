@@ -25,7 +25,7 @@ import { json2PhpArray } from "../handler/json2PhpArray";
 import { phpArray2Json } from "../handler/phpArray2Json";
 import { capitalCase } from "../handler/capitalCase";
 import { numberedByLines } from "../handler/numberedByLines";
-import { jsonstringify } from "../handler/jsonstringify";
+import { jsonStringify } from "../handler/jsonStringify";
 import { jsonParse } from "../handler/jsonParse";
 import { jsonBeautify } from "../handler/jsonBeautify";
 import { jsonMinify } from "../handler/jsonMinify";
@@ -245,7 +245,7 @@ const commandRegister: CommandType[] = [
     label: 'jsonStringify',
     description: '"{\"kirs\": \"OKE\"}"',
     detail: 'Transform the JSON to JSON string.',
-    callback: commandProvider(jsonstringify)
+    callback: commandProvider(jsonStringify)
   },
   {
     type: COMMAND_TYPE_HANDLER,

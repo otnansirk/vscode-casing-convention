@@ -1,7 +1,7 @@
 import { strictEqual } from "assert";
-import { jsonstringify } from "./jsonstringify";
+import { jsonStringify } from "./jsonStringify";
 
-describe('jsonstringify', function () {
+describe('jsonStringify', function () {
 
   const TEST_CASES = [
     {
@@ -19,7 +19,7 @@ describe('jsonstringify', function () {
 
   TEST_CASES.forEach(({ input, expected }: any) => {
     it(`Sould convert ${JSON.stringify(input)} to ${expected}`, function () {
-      let result = jsonstringify(input);
+      let result = jsonStringify(input);
       strictEqual(result, expected.toString());
     });
   });
