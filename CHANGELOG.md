@@ -7,6 +7,19 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v1.4.0] - 2024-12-01
+
+### New Features
+- JSON Minify
+- JSON Beautify
+- JSON to Object JS
+- Object JS to JSON
+
+### Fixed
+- Unit test for JSON parse
+- Numbered line by line only if there are characters other than space
+- Standardize file names
+
 ## [v1.3.0] - 2024-07-12
 
 ### New Features
@@ -60,3 +73,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v1.1.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.2
 [v1.2.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.2.2
 [v1.3.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.3.0
+[v1.4.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.4.0
