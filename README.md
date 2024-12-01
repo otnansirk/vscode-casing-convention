@@ -14,6 +14,7 @@ Transform your text with the power of casing conventions.
 
 <a href="https://www.producthunt.com/posts/vscode-casing-convention?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vscode&#0045;casing&#0045;convention" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=400069&theme=light" alt="VSCode&#0032;Casing&#0032;Convention - Transform&#0032;your&#0032;text&#0032;with&#0032;the&#0032;power&#0032;of&#0032;casing&#0032;conventions | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
+
 ## Usage
 1. Install the Extension: Open the Extensions view in VS Code by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac). Search for the extension by name, "Casing Convention", and click on "Install" to install it.
 2. Select the Text to Convert: Ensure that the text you want to convert is selected in the editor.
@@ -79,9 +80,17 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **enterNumberByLines**: Transform the text to numbered text line by line.
 
-- **JSON Stringify**: Transform the JSON to text.
+- **jsonStringify**: Transform the JSON to text.
 
-- **JSON Parse**: Transform the JSON string to JSON.
+- **jsonParse**: Transform the JSON string to JSON.
+
+- **jsonBeautify**: Format the JSON more beautiful.
+
+- **jsonMinify**: Transform the JSON to one line.
+
+- **objectJS2Json**: Transform the Object JS to JSON.
+
+- **json2ObjectJS**: Transform the JSON to Object JS.
 
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
@@ -115,6 +124,10 @@ To use the extension, you can execute the following commands:
 - `casing-convention.enterNumberByLines`: Add text number line by line.
 - `casing-convention.jsonStringify`: Convert JSON to JSON Stringify.
 - `casing-convention.jsonParse`: Convert JSON Stringify to JSON.
+- `casing-convention.jsonBeautify`: convert JSON for beautiful format.
+- `casing-convention.jsonMinify`: Convert JSON to one line format without space.
+- `casing-convention.json2ObjectJS`: Convert JSON to ObjectJS.
+- `casing-convention.objectJS2Json`: Convert ObjectJS to JSON.
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.
