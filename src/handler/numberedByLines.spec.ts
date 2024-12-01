@@ -1,5 +1,4 @@
 import { strictEqual } from "assert";
-import { capitalCase } from "./capitalCase";
 import { numberedByLines } from "./numberedByLines";
 
 describe('numberedByLines', function() {
@@ -20,6 +19,14 @@ describe('numberedByLines', function() {
     {
       input: "KRIS_HowAreYOU\nhalo semua",
       expected: "1. KRIS_HowAreYOU\n2. halo semua"
+    },
+    {
+      input: "KRIS_HowAreYOU\n  ",
+      expected: "1. KRIS_HowAreYOU\n  "
+    },
+    {
+      input: "",
+      expected: ""
     },
   ];
 
