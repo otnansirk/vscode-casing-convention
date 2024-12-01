@@ -18,7 +18,7 @@ describe('jsonstringify', function () {
   ];
 
   TEST_CASES.forEach(({ input, expected }: any) => {
-    it(`Sould convert ${input} to ${expected}`, function () {
+    it(`Sould convert ${JSON.stringify(input)} to ${expected}`, function () {
       let result = jsonstringify(input);
       strictEqual(result, expected.toString());
     });
