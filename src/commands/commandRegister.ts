@@ -8,7 +8,6 @@ import {
   pascalCase,
   pathCase,
   sentenceCase,
-  snakeCase
 } from "change-case";
 import { lowerCaseFirst } from "../handler/lowerCaseFirst";
 import { upperCaseFirst } from "../handler/upperCaseFirst";
@@ -31,6 +30,7 @@ import { jsonBeautify } from "../handler/jsonBeautify";
 import { jsonMinify } from "../handler/jsonMinify";
 import { json2ObjectJS } from "../handler/json2ObjectJS";
 import { objectJS2Json } from "../handler/objectJS2Json";
+import { snakeCase } from "../handler/snakeCase";
 
 
 type CommandType = {
