@@ -1,0 +1,1 @@
+export const base64Encode = (text: string): string => btoa(text);

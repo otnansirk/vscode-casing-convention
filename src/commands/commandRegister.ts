@@ -31,6 +31,8 @@ import { jsonMinify } from "../handler/jsonMinify";
 import { json2ObjectJS } from "../handler/json2ObjectJS";
 import { objectJS2Json } from "../handler/objectJS2Json";
 import { snakeCase } from "../handler/snakeCase";
+import { base64Decode } from "../handler/base64Decode";
+import { base64Encode } from "../handler/base64Encode";
 
 
 type CommandType = {
@@ -286,6 +288,22 @@ const commandRegister: CommandType[] = [
     description: '{hobies: ["music", "games"]}"',
     detail: 'Transform the Object JS to JSON.',
     callback: commandProvider(objectJS2Json)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.base64Encode',
+    label: 'base64Encode',
+    description: '',
+    detail: 'Transform base6 to string.',
+    callback: commandProvider(base64Encode)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.base64Decode',
+    label: 'base64Decode',
+    description: '',
+    detail: 'Transform string to base6.',
+    callback: commandProvider(base64Decode)
   },
 ];
 

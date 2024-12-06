@@ -95,6 +95,10 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **json2ObjectJS**: Transform the JSON to Object JS.
 
+- **base64Encode**: Encodes to Base64.
+
+- **base64Decode**: Decodes from Base64.
+
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
 ## Extension Setting
@@ -131,6 +135,8 @@ To use the extension, you can execute the following commands:
 - `casing-convention.jsonMinify`: Convert JSON to one line format without space.
 - `casing-convention.json2ObjectJS`: Convert JSON to ObjectJS.
 - `casing-convention.objectJS2Json`: Convert ObjectJS to JSON.
+- `casing-convention.base64Encode`: Encodes to base64.
+- `casing-convention.base64Decode`: Decodes from base64.
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.

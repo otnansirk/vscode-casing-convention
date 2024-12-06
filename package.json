@@ -203,6 +203,14 @@
             {
                 "command": "casing-convention.objectJS2Json",
                 "title": "casing: Object JS to JSON"
+            },
+            {
+                "command": "casing-convention.base64Encode",
+                "title": "casing: Base64 encode"
+            },
+            {
+                "command": "casing-convention.base64Decode",
+                "title": "casing: Base64 decode"
             }
         ],
         "menus": {

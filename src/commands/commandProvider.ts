@@ -29,13 +29,13 @@ const commandProvider = (callback: any) => async () => {
     });
 
     // Display a message box to the user
-    await vscode.window.showInformationMessage(`Success convert to ${callback.name}`, {modal:false});
+    await vscode.window.showInformationMessage(`${callback.name} : Successfully`, {modal:false});
   } catch (err) {
     // Display a message box to the user
     if (err instanceof HasNoSelected) {
       await vscode.window.showErrorMessage(err.message);
-    } else {
-      await vscode.window.showErrorMessage(`Failed convert to ${callback.name}`);
+    } else {    
+      await vscode.window.showErrorMessage(`${callback.name} : Failed`);
     }
   }
 
