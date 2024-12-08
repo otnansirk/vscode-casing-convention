@@ -1,7 +1,7 @@
 import HasNoSelected from '../exception/HasNoSelected';
 import * as vscode from 'vscode';
 
-const commandProvider = (callback: any) => async () => {
+const commandProvider = (callback: (text: string) => string | Promise<string>) => async () => {
 
   const editor = vscode.window.activeTextEditor;
   const selections = editor?.selections;
@@ -11,30 +11,41 @@ const commandProvider = (callback: any) => async () => {
   }
 
   try {
-    await editor.edit(editBuilder => {
-      selections.forEach(el => {
 
-        const selectionRange =new vscode.Range(
+    const changes = await Promise.all(
+      selections.map(async (el) => {
+        const selectionRange = new vscode.Range(
           el.start.line,
           el.start.character,
           el.end.line,
           el.end.character
-          );
+        );
+
         const highlighted = editor.document.getText(selectionRange);
         if (!highlighted) {
           throw new HasNoSelected("Your cursor doesn't select any strings");
         }
-        editBuilder.replace(el, callback(highlighted));
+
+        const clbk = callback(highlighted);
+        const resolvedResult = clbk instanceof Promise ? await clbk : clbk;
+
+        return { range: el, replacement: resolvedResult };
+      })
+    );
+
+    await editor.edit((editBuilder) => {
+      changes.forEach(({ range, replacement }) => {
+        editBuilder.replace(range, replacement);
       });
     });
 
     // Display a message box to the user
-    await vscode.window.showInformationMessage(`${callback.name} : Successfully`, {modal:false});
+    await vscode.window.showInformationMessage(`${callback.name} : Successfully`, { modal: false });
   } catch (err) {
     // Display a message box to the user
     if (err instanceof HasNoSelected) {
       await vscode.window.showErrorMessage(err.message);
-    } else {    
+    } else {
       await vscode.window.showErrorMessage(`${callback.name} : Failed`);
     }
   }
