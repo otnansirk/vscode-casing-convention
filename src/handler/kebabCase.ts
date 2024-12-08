@@ -5,4 +5,4 @@ import { splitWords } from "../helpers/splitWords";
  *
  * @returns
  */
-export const kebabCase = (str: string) => splitWords(str)?.map((str) => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()).join('-');
+export const kebabCase = (str: string): string => splitWords(str)?.map((str) => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()).join('-') ?? '';
