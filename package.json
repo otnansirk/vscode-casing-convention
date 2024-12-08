@@ -211,6 +211,10 @@
             {
                 "command": "casing-convention.base64Decode",
                 "title": "casing: Base64 decode"
+            },
+            {
+                "command": "casing-convention.jsonAsType",
+                "title": "casing: JSON as Type"
             }
         ],
         "menus": {
