@@ -33,6 +33,7 @@ import { objectJS2Json } from "../handler/objectJS2Json";
 import { snakeCase } from "../handler/snakeCase";
 import { base64Decode } from "../handler/base64Decode";
 import { base64Encode } from "../handler/base64Encode";
+import { jsonAsType } from "../handler/jsonAsType";
 
 
 type CommandType = {
@@ -304,6 +305,14 @@ const commandRegister: CommandType[] = [
     description: '',
     detail: 'Transform string to base6.',
     callback: commandProvider(base64Decode)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.jsonAsType',
+    label: 'jsonAsType',
+    description: '',
+    detail: 'Transform JSON as type/struct.',
+    callback: commandProvider(jsonAsType)
   },
 ];
 
