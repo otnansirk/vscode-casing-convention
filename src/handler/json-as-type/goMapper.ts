@@ -33,7 +33,7 @@ export const goMapper = (jString: string, name: string = "TestStruct") => {
     return structGenerator(jStringAsObject, name, keyMaxLength, typeMaxLength);
 };
 
-const structGenerator = (data: any, name: string= "MyStruct", keyMaxLength= 0, typeMaxLength= 0) => {
+const structGenerator = (data: any, name: string, keyMaxLength= 0, typeMaxLength= 0) => {
 
     let memberOfStructs: string[] = [];
     let stringTypes: string[] = [`type ${name} struct {`];
