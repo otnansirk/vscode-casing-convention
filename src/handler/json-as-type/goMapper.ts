@@ -12,14 +12,20 @@ export const goMapper = (jString: string, name: string = "TestStruct") => {
         const type = typeof jStringAsObject[key];
         const attr = camelCase(key);
 
-        typeMaxLength = Math.max(typeMaxLength, type.length + 1);
+        typeMaxLength = Math.max(typeMaxLength, type.length);
         keyMaxLength = Math.max(keyMaxLength, attr.length + 1);
 
         if (type === 'object') {
+            // empty object
+            typeMaxLength = Math.max(typeMaxLength, type.length + 3);
             if (isArray(value)) {
-                typeMaxLength = Math.max(typeMaxLength, attr.length + 1);
-            } else {
-                typeMaxLength = Math.max(typeMaxLength, attr.length + 3);
+                if (value.length) {
+                    // not empty array
+                    typeMaxLength = Math.max(typeMaxLength, attr.length + 3);
+                } else {
+                    // empty array
+                    typeMaxLength = Math.max(typeMaxLength, type.length + 8);
+                }
             }
         }
     }
@@ -39,7 +45,7 @@ const structGenerator = (data: any, name: string= "MyStruct", keyMaxLength= 0, t
         let attr = pascalCase(key);
         let type = getType(dataValue);
 
-        if (dataType === 'object' && isNotArray(dataValue)) {
+        if (dataType === 'object' && isNotArray(dataValue) && Object.keys(dataValue).length) {
             type = pascalCase(key);
             memberOfStructs.push(
                 goMapper(
@@ -79,6 +85,8 @@ const getType = (value: string): string => {
             return value % 1 === 0 ? "int" : "float64";
         case "boolean":
             return "bool";
+        case "object":
+            return "struct{}";
         default:
             return "interface{}";
     }
