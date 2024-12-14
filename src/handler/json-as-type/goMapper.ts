@@ -77,7 +77,7 @@ const structGenerator = (data: any, name: string, keyMaxLength= 0, typeMaxLength
 };
 
 
-const getType = (value: string): string => {
+export const getType = (value: string): string => {
     switch (typeof value) {
         case "string":
             return "string";
