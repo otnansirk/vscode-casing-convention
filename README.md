@@ -99,6 +99,9 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **base64Decode**: Decodes from Base64.
 
+- **JSON as Type**: 
+    - *Go Struct* : Transform JSON to Go Struct
+
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
 ## Extension Setting
@@ -137,6 +140,7 @@ To use the extension, you can execute the following commands:
 - `casing-convention.objectJS2Json`: Convert ObjectJS to JSON.
 - `casing-convention.base64Encode`: Encodes to base64.
 - `casing-convention.base64Decode`: Decodes from base64.
+- `casing-convention.jsonAsType`: Convert JSON to types
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.
