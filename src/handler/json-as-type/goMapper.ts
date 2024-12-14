@@ -1,7 +1,7 @@
 import { camelCase, pascalCase } from "change-case";
 import { isArray, isNotArray } from "../../helpers/Array";
 
-export const goMapper = (jString: string, name: string = "TestStruct") => {
+export const goMapper = (jString: string, name: string = "StructName") => {
 
     const jStringAsObject = JSON.parse(jString);
     let keyMaxLength  = 0;
