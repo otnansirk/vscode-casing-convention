@@ -39,5 +39,3 @@ const functionMap: FunctionMap = {
     uuidv7,
     uuidNil: () => uuidNil
 };
-
-// export const uuidGenV4 = async () => uuidTools();
