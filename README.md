@@ -12,10 +12,9 @@ Transform your text with the power of casing conventions.
 ![Lines](https://img.shields.io/badge/lines-92.97%25-brightgreen.svg?style=flat)
 
 ## Support and Donate
-<a href="https://www.buymeacoffee.com/otnansirk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.buymeacoffee.com/otnansirk" target="_blank"><img src="assets/buymecoffe.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-
-<a href="https://www.producthunt.com/posts/vscode-casing-convention?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vscode&#0045;casing&#0045;convention" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=400069&theme=light" alt="VSCode&#0032;Casing&#0032;Convention - Transform&#0032;your&#0032;text&#0032;with&#0032;the&#0032;power&#0032;of&#0032;casing&#0032;conventions | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+[![VSCode Casing Convention - Transform your text with the power of casing conventions](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=400069&theme=light)](https://www.producthunt.com/posts/vscode-casing-convention?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vscode&#0045;casing&#0045;convention)
 
 
 ## Usage
