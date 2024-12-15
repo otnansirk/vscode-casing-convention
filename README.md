@@ -6,10 +6,10 @@ Transform your text with the power of casing conventions.
 
 ## Code Coverage
 
-![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat)
-![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat)
-![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat)
-![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat)
+![Statements](https://img.shields.io/badge/statements-93.8%25-brightgreen.svg?style=flat)
+![Branches](https://img.shields.io/badge/branches-77.04%25-red.svg?style=flat)
+![Functions](https://img.shields.io/badge/functions-96.29%25-brightgreen.svg?style=flat)
+![Lines](https://img.shields.io/badge/lines-92.97%25-brightgreen.svg?style=flat)
 
 ## Support and Donate
 <a href="https://www.buymeacoffee.com/otnansirk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
