@@ -34,6 +34,7 @@ import { snakeCase } from "../handler/snakeCase";
 import { base64Decode } from "../handler/base64Decode";
 import { base64Encode } from "../handler/base64Encode";
 import { jsonAsType } from "../handler/jsonAsType";
+import { uuidTools } from "../handler/uuidTools";
 
 
 type CommandType = {
@@ -313,6 +314,14 @@ const commandRegister: CommandType[] = [
     description: '',
     detail: 'Transform JSON as type/struct.',
     callback: commandProvider(jsonAsType)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.uuidTools',
+    label: 'UUID Universe',
+    description: '',
+    detail: 'UUID Universe.',
+    callback: commandProvider(uuidTools, false)
   },
 ];
 
