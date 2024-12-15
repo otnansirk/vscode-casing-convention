@@ -7,6 +7,17 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v1.5.0] - 2024-12-14
+
+### New Features
+- JSON as Type (Go Struct)
+- UUID Universe
+    + Generate uuid v1
+    + Generate uuid v4
+    + Generate uuid v6
+    + Generate uuid v7
+    + Generate uuid Nil / Empty
+
 ## [v1.4.0] - 2024-12-01
 
 ### New Features
