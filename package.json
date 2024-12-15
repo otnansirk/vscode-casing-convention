@@ -42,7 +42,8 @@
         "lower-case": "^2.0.2",
         "sponge-case": "^1.0.1",
         "swap-case": "^2.0.2",
-        "upper-case": "^2.0.2"
+        "upper-case": "^2.0.2",
+        "uuid": "^11.0.3"
     },
     "galleryBanner": {
         "color": "#042e00",
@@ -215,6 +216,10 @@
             {
                 "command": "casing-convention.jsonAsType",
                 "title": "casing: JSON as Type"
+            },
+            {
+                "command": "casing-convention.uuidTools",
+                "title": "casing: UUID Universe"
             }
         ],
         "menus": {
