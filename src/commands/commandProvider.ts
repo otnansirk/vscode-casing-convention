@@ -1,7 +1,7 @@
 import HasNoSelected from '../exception/HasNoSelected';
 import * as vscode from 'vscode';
 
-const commandProvider = (callback: (text: string) => string | Promise<string>) => async () => {
+const commandProvider = (callback: (text: string) => string | Promise<string>, highlightedValidated: boolean = true) => async () => {
 
   const editor = vscode.window.activeTextEditor;
   const selections = editor?.selections;
@@ -22,7 +22,7 @@ const commandProvider = (callback: (text: string) => string | Promise<string>) =
         );
 
         const highlighted = editor.document.getText(selectionRange);
-        if (!highlighted) {
+        if (!highlighted && highlightedValidated) {
           throw new HasNoSelected("Your cursor doesn't select any strings");
         }
 
