@@ -39,10 +39,9 @@
     },
     "dependencies": {
         "change-case": "^4.1.2",
-        "lower-case": "^2.0.2",
-        "sponge-case": "^1.0.1",
+        "google-translate-token": "^1.0.0",
+        "sponge-case": "^2.0.3",
         "swap-case": "^2.0.2",
-        "upper-case": "^2.0.2",
         "uuid": "^11.0.3"
     },
     "galleryBanner": {
@@ -220,6 +219,10 @@
             {
                 "command": "casing-convention.uuidTools",
                 "title": "casing: UUID Universe"
+            },
+            {
+                "command": "casing-convention.translation",
+                "title": "casing: Translate"
             }
         ],
         "menus": {

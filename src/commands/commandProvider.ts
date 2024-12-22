@@ -42,6 +42,8 @@ const commandProvider = (callback: (text: string) => string | Promise<string>, h
     // Display a message box to the user
     await vscode.window.showInformationMessage(`${callback.name} : Successfully`, { modal: false });
   } catch (err) {
+    console.log("Error", err);
+    
     // Display a message box to the user
     if (err instanceof HasNoSelected) {
       await vscode.window.showErrorMessage(err.message);

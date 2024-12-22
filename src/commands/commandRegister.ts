@@ -14,8 +14,6 @@ import { upperCaseFirst } from "../handler/upperCaseFirst";
 import { titleCase } from "../handler/titleCase";
 import { commandHelp } from "./commandHelp";
 import { spongeCase } from "sponge-case";
-import { lowerCase } from "lower-case";
-import { upperCase } from "upper-case";
 import { swapCase } from "swap-case";
 import commandProvider from "./commandProvider";
 import { kebabCase } from "../handler/kebabCase";
@@ -35,6 +33,9 @@ import { base64Decode } from "../handler/base64Decode";
 import { base64Encode } from "../handler/base64Encode";
 import { jsonAsType } from "../handler/jsonAsType";
 import { uuidTools } from "../handler/uuidTools";
+import { translation } from "../handler/translation";
+import { lowerCase } from "../handler/lowerCase";
+import { upperCase } from "../handler/upperCase";
 
 
 type CommandType = {
@@ -322,6 +323,14 @@ const commandRegister: CommandType[] = [
     description: '',
     detail: 'UUID Universe.',
     callback: commandProvider(uuidTools, false)
+  },
+  {
+    type: COMMAND_TYPE_HANDLER,
+    name: 'casing-convention.translation',
+    label: 'Translate',
+    description: '',
+    detail: 'Translate your favorit text.',
+    callback: commandProvider(translation)
   },
 ];
 
