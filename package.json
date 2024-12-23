@@ -40,7 +40,7 @@
     "dependencies": {
         "change-case": "^4.1.2",
         "google-translate-token": "^1.0.0",
-        "sponge-case": "^2.0.3",
+        "sponge-case": "^1.0.1",
         "swap-case": "^2.0.2",
         "uuid": "^11.0.3"
     },
