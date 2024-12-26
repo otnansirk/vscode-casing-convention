@@ -40,7 +40,7 @@ const commandProvider = (callback: (text: string) => string | Promise<string>, h
     });
 
     // Display a message box to the user
-    await vscode.window.showInformationMessage(`${callback.name} : Successfully`, { modal: false });
+    vscode.window.setStatusBarMessage(`${callback.name} : Successfully`, 2000);
   } catch (err) {
     console.log("Error", err);
     
