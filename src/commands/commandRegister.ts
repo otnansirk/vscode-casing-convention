@@ -1,3 +1,4 @@
+import * as vscode from "vscode";
 import {
   camelCase,
   constantCase,
@@ -59,6 +60,14 @@ const commandRegister: CommandType[] = [
     description: 'Help center',
     detail: 'This will show you all of commands available in this extension',
     callback: commandHelp
+  },
+  {
+    type: COMMAND_TYPE_CORE,
+    name: 'casing-convention.setting.translation-hover.defaultTargetLanguage',
+    label: 'Translate',
+    description: '',
+    detail: 'Translate your favorit text.',
+    callback: async () => vscode.commands.executeCommand('workbench.action.openSettings', '@id:casing-convention.translation-hover.defaultTargetLanguage')
   },
   {
     type: COMMAND_TYPE_HANDLER,
@@ -331,7 +340,7 @@ const commandRegister: CommandType[] = [
     description: '',
     detail: 'Translate your favorit text.',
     callback: commandProvider(translation)
-  },
+  }
 ];
 
 export default commandRegister;
