@@ -4,10 +4,20 @@ interface QuickPickItemWithValue extends QuickPickItem {
 	value: string;
 }
 
+export const getLanguageByLabel = (label: string): QuickPickItemWithValue|undefined => 
+    languages.find((item: QuickPickItemWithValue) => item.label === label);
+
+export const getLanguageValueByLabel = (label: string): string => 
+    languages.find((item: QuickPickItemWithValue) => item.label === label)?.value ?? "id";
+
 export const languages: QuickPickItemWithValue[] = [
     {
         label: "English",
         value: "en"
+    },
+    {
+        label: "Indonesian",
+        value: "id"
     },
     {
         label: "Afrikaans",
@@ -164,10 +174,6 @@ export const languages: QuickPickItemWithValue[] = [
     {
         label: "Igbo",
         value: "ig"
-    },
-    {
-        label: "Indonesian",
-        value: "id"
     },
     {
         label: "Irish",

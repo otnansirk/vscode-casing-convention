@@ -12,6 +12,14 @@ export const translation = async (text: string) => {
         placeHolder: "Select language",
         canPickMany: false
       });
+      return translate(text, targetLanguage?.value);
+    } catch (error) {
+      console.log(error, "Select language");
+    }    
+};
+
+export const translate = async (text: string, to: string="id") => {
+    try {
 
       const q = text.split("\n");
       const gtranslateToken = await token.get(randomUUID());
@@ -20,7 +28,7 @@ export const translation = async (text: string) => {
         client: 'gtx',
         hl: 'en',
         sl: 'auto',
-        tl: targetLanguage?.value,
+        tl: to,
         dj: '1',
         mode: '1',
         sp: 'nmt',
