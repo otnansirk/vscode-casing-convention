@@ -5,6 +5,7 @@ import commandRegister from './commands/commandRegister';
 import { translate } from './handler/translation';
 import { getLanguageValueByLabel } from './helpers/languages';
 import codeActionRegister from './code-actions/codeActionRegister';
+import hoverRegister from './hover/codeActionRegister';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -22,37 +23,19 @@ export function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(disposable);
 	});
 
+	// Provide the implementation of code action with code action register
+	// This will display a lamp bulb icon to the left or top of the selected text
 	codeActionRegister.forEach(el => {
 		let disposable = vscode.languages.registerCodeActionsProvider(el.selector, el.provider);
 		context.subscriptions.push(disposable);
 	});
 
-	const hoverProvider = vscode.languages.registerHoverProvider([{scheme: 'file'}, {scheme: 'untitled'}], {
-		provideHover(document, position, token) {
-			const translationHoverSetting = vscode.workspace.getConfiguration('casing-convention.translation-hover');
-			
-			const translateOnHover: boolean  = translationHoverSetting.get("translateOnHover", false);
-			const defaultTranslateTo: string = translationHoverSetting.get("defaultTargetLanguage", "");
-
-
-			if (translateOnHover) {
-				const text   = document.lineAt(position).text;
-				const hoverContent = new vscode.MarkdownString();
-				
-				hoverContent.appendMarkdown('_[Translate to](command:casing-convention.setting.translation-hover.defaultTargetLanguage)_\n\n');
-				hoverContent.isTrusted = true;
-
-				const toLanguage: string = getLanguageValueByLabel(defaultTranslateTo);
-				return translate(text, toLanguage)
-					.then(res => {
-						hoverContent.appendMarkdown("`"+res+"`");
-						return new vscode.Hover(hoverContent);
-					});
-			}
-		}
+	// Provide the implementation of hover with hover register
+	// This will display a tooltip when hovering over text.
+	hoverRegister.forEach(el => {
+		let disposable = vscode.languages.registerHoverProvider(el.selector, el.provider);
+		context.subscriptions.push(disposable);
 	});
-	context.subscriptions.push(hoverProvider);
-
 }
 
 // This method is called when your extension is deactivated
