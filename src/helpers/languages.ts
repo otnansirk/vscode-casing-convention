@@ -1,6 +1,6 @@
 import { QuickPickItem } from "vscode";
 
-interface QuickPickItemWithValue extends QuickPickItem {
+export interface QuickPickItemWithValue extends QuickPickItem {
 	value: string;
 }
 

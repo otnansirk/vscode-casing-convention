@@ -1,5 +1,9 @@
+import {
+  getLanguageByLabel,
+  languages,
+  QuickPickItemWithValue
+} from '../helpers/languages';
 import { json2UrlParams } from '../helpers/json2UrlParams';
-import { languages } from '../helpers/languages';
 import * as token from 'google-translate-token';
 import { randomUUID } from 'crypto';
 import * as vscode from 'vscode';
@@ -7,10 +11,19 @@ import * as vscode from 'vscode';
 
 export const translation = async (text: string) => {
     try {
-      
-      let targetLanguage = await vscode.window.showQuickPick(languages, {
-        placeHolder: "Select language",
-        canPickMany: false
+      let languageSelections = languages;
+      const translationHoverSetting = vscode.workspace.getConfiguration('casing-convention.translation-hover');      
+      const defaultTranslateTo: string = translationHoverSetting.get("defaultTargetLanguage", "");
+      const toLanguage: QuickPickItemWithValue|undefined = getLanguageByLabel(defaultTranslateTo);
+      if (defaultTranslateTo && toLanguage) {
+        languageSelections = languages.filter((item: QuickPickItemWithValue) => item.label !== toLanguage.label);
+        languageSelections.unshift(toLanguage);
+      }
+
+      let targetLanguage = await vscode.window.showQuickPick(languageSelections, {
+        placeHolder: `Select language (Default: ${defaultTranslateTo})`,
+        canPickMany: false,
+        title: "Translate to"
       });
       return translate(text, targetLanguage?.value);
     } catch (error) {
