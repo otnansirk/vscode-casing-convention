@@ -64,10 +64,10 @@ const commandRegister: CommandType[] = [
   {
     type: COMMAND_TYPE_CORE,
     name: 'casing-convention.setting.translation-hover.defaultTargetLanguage',
-    label: 'Translate',
+    label: 'Go to default target language setting',
     description: '',
-    detail: 'Translate your favorit text.',
-    callback: async () => vscode.commands.executeCommand('workbench.action.openSettings', '@id:casing-convention.translation-hover.defaultTargetLanguage')
+    detail: 'Go to default target language settings.',
+    callback: async () => vscode.commands.executeCommand('workbench.action.openSettings', '@id:casing-convention.translation.defaultTargetLanguage')
   },
   {
     type: COMMAND_TYPE_HANDLER,
