@@ -330,12 +330,8 @@
         "configuration": {
             "title": "Casing Convention",
             "properties": {
-                "casing-convention.translation-hover.translateOnHover": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Translate on hover"
-                },
-                "casing-convention.translation-hover.defaultTargetLanguage": {
+                "casing-convention.translation.defaultTargetLanguage": {
+                    "order": 1,
                     "type": "string",
                     "enum": [
                         "English",
@@ -446,6 +442,12 @@
                     ],
                     "default": "Indonesian",
                     "description": "Select the default target language."
+                },
+                "casing-convention.translation-hover.translateOnHover": {
+                    "order": 2,
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Translate on hover"
                 }
             }
         },
