@@ -1,4 +1,4 @@
-import { splitWords } from "../helpers/splitWords";
+import { splitWords } from "../../helpers/splitWords";
 
 /**
  * Convert the character of an input string to kebab-case.

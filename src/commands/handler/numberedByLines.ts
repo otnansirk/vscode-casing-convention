@@ -1,4 +1,4 @@
-import { isOnlySpaces } from "../helpers/isOnlySpace";
+import { isOnlySpaces } from "../../helpers/isOnlySpace";
 
 export const numberedByLines = (text: string): string => {
     let numbered = 0;

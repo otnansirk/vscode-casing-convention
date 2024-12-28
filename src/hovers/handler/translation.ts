@@ -1,5 +1,5 @@
 import { Hover, MarkdownString, Position, TextDocument, workspace } from "vscode";
-import { translate } from "../../handler/translation";
+import { translate } from "../../commands/handler/translation";
 import { getLanguageValueByLabel } from "../../helpers/languages";
 
 const translation = () => {

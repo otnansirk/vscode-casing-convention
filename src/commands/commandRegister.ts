@@ -10,33 +10,33 @@ import {
   pathCase,
   sentenceCase,
 } from "change-case";
-import { lowerCaseFirst } from "../handler/lowerCaseFirst";
-import { upperCaseFirst } from "../handler/upperCaseFirst";
-import { titleCase } from "../handler/titleCase";
+import { lowerCaseFirst } from "./handler/lowerCaseFirst";
+import { upperCaseFirst } from "./handler/upperCaseFirst";
+import { titleCase } from "./handler/titleCase";
 import { commandHelp } from "./commandHelp";
 import { spongeCase } from "sponge-case";
 import { swapCase } from "swap-case";
 import commandProvider from "./commandProvider";
-import { kebabCase } from "../handler/kebabCase";
-import { screamKebabCase } from "../handler/screamKebabCase";
-import { json2PhpArray } from "../handler/json2PhpArray";
-import { phpArray2Json } from "../handler/phpArray2Json";
-import { capitalCase } from "../handler/capitalCase";
-import { numberedByLines } from "../handler/numberedByLines";
-import { jsonStringify } from "../handler/jsonStringify";
-import { jsonParse } from "../handler/jsonParse";
-import { jsonBeautify } from "../handler/jsonBeautify";
-import { jsonMinify } from "../handler/jsonMinify";
-import { json2ObjectJS } from "../handler/json2ObjectJS";
-import { objectJS2Json } from "../handler/objectJS2Json";
-import { snakeCase } from "../handler/snakeCase";
-import { base64Decode } from "../handler/base64Decode";
-import { base64Encode } from "../handler/base64Encode";
-import { jsonAsType } from "../handler/jsonAsType";
-import { uuidTools } from "../handler/uuidTools";
-import { translation } from "../handler/translation";
-import { lowerCase } from "../handler/lowerCase";
-import { upperCase } from "../handler/upperCase";
+import { kebabCase } from "./handler/kebabCase";
+import { screamKebabCase } from "./handler/screamKebabCase";
+import { json2PhpArray } from "./handler/json2PhpArray";
+import { phpArray2Json } from "./handler/phpArray2Json";
+import { capitalCase } from "./handler/capitalCase";
+import { numberedByLines } from "./handler/numberedByLines";
+import { jsonStringify } from "./handler/jsonStringify";
+import { jsonParse } from "./handler/jsonParse";
+import { jsonBeautify } from "./handler/jsonBeautify";
+import { jsonMinify } from "./handler/jsonMinify";
+import { json2ObjectJS } from "./handler/json2ObjectJS";
+import { objectJS2Json } from "./handler/objectJS2Json";
+import { snakeCase } from "./handler/snakeCase";
+import { base64Decode } from "./handler/base64Decode";
+import { base64Encode } from "./handler/base64Encode";
+import { jsonAsType } from "./handler/jsonAsType";
+import { uuidTools } from "./handler/uuidTools";
+import { translation } from "./handler/translation";
+import { lowerCase } from "./handler/lowerCase";
+import { upperCase } from "./handler/upperCase";
 
 
 type CommandType = {

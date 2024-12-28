@@ -1,4 +1,4 @@
-import HasNoSelected from "../exception/HasNoSelected";
+import HasNoSelected from "../../exception/HasNoSelected";
 import { goMapper } from "./json-as-type/goMapper";
 import * as vscode from 'vscode';
 

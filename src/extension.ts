@@ -2,10 +2,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import commandRegister from './commands/commandRegister';
-import { translate } from './handler/translation';
-import { getLanguageValueByLabel } from './helpers/languages';
 import codeActionRegister from './code-actions/codeActionRegister';
-import hoverRegister from './hover/codeActionRegister';
+import hoverRegister from './hovers/codeActionRegister';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed

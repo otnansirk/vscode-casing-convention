@@ -2,8 +2,8 @@ import {
   getLanguageByLabel,
   languages,
   QuickPickItemWithValue
-} from '../helpers/languages';
-import { json2UrlParams } from '../helpers/json2UrlParams';
+} from '../../helpers/languages';
+import { json2UrlParams } from '../../helpers/json2UrlParams';
 import * as token from 'google-translate-token';
 import { randomUUID } from 'crypto';
 import * as vscode from 'vscode';
