@@ -1,5 +1,5 @@
 import { strictEqual } from "assert";
-import { isArray, isNotArray } from "./Array";
+import { isArray, isNotArray } from "./arrayTools";
 
 describe('isArray', () => {
 

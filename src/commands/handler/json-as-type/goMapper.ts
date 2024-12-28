@@ -1,5 +1,5 @@
 import { camelCase, pascalCase } from "change-case";
-import { isArray, isNotArray } from "../../../helpers/Array";
+import { isArray, isNotArray } from "../../../helpers/arrayTools";
 
 export const goMapper = (jString: string, name: string = "StructName") => {
 
