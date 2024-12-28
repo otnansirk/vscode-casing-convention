@@ -12,8 +12,8 @@ import * as vscode from 'vscode';
 export const translation = async (text: string) => {
     try {
       let languageSelections = languages;
-      const translationHoverSetting = vscode.workspace.getConfiguration('casing-convention.translation-hover');      
-      const defaultTranslateTo: string = translationHoverSetting.get("defaultTargetLanguage", "");
+      const translationSetting = vscode.workspace.getConfiguration('casing-convention.translation');
+      const defaultTranslateTo: string = translationSetting.get("defaultTargetLanguage", "");
       const toLanguage: QuickPickItemWithValue|undefined = getLanguageByLabel(defaultTranslateTo);
       if (defaultTranslateTo && toLanguage) {
         languageSelections = languages.filter((item: QuickPickItemWithValue) => item.label !== toLanguage.label);

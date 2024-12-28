@@ -5,16 +5,17 @@ import { getLanguageValueByLabel } from "../../helpers/languages";
 const translation = () => {
     return {
         provideHover(document: TextDocument, position: Position) {
+            const translationSetting = workspace.getConfiguration('casing-convention.translation');
             const translationHoverSetting = workspace.getConfiguration('casing-convention.translation-hover');
 
+            const defaultTranslateTo: string = translationSetting.get("defaultTargetLanguage", "");
             const translateOnHover: boolean = translationHoverSetting.get("translateOnHover", false);
-            const defaultTranslateTo: string = translationHoverSetting.get("defaultTargetLanguage", "");
 
             if (translateOnHover) {
                 const text = document.lineAt(position).text;
                 const hoverContent = new MarkdownString();
 
-                hoverContent.appendMarkdown('_[Translate to](command:casing-convention.setting.translation-hover.defaultTargetLanguage)_\n\n');
+                hoverContent.appendMarkdown(`_[Translate to](command:casing-convention.setting.translation-hover.defaultTargetLanguage) : ${defaultTranslateTo}_\n\n`);
                 hoverContent.isTrusted = true;
 
                 const toLanguage: string = getLanguageValueByLabel(defaultTranslateTo);
