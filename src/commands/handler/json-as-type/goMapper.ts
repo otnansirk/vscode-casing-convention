@@ -1,6 +1,7 @@
 import { camelCase, pascalCase } from "change-case";
 import { isArray, isNotArray } from "../../../helpers/arrayTools";
 import { isEmptyObject } from "../../../helpers/objectTools";
+import { snakeCase } from "../snakeCase";
 
 export const goMapper = (jString: string, name: string = "StructName") => {
 
@@ -77,7 +78,7 @@ const structGenerator = (data: any, name: string, keyMaxLength= 0, typeMaxLength
             type = isObject ? `[]${pascalCase(key)}` : `[]${getType(dataValue[0])}`;
         }
 
-        stringTypes.push(`    ${attr.padEnd(keyMaxLength)}${type.padEnd(typeMaxLength)}\`json:"${key}"\``);
+        stringTypes.push(`    ${attr.padEnd(keyMaxLength)}${type.padEnd(typeMaxLength)}\`json:"${snakeCase(key)}"\``);
     }
 
     stringTypes.push('}');
