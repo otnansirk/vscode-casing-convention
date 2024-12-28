@@ -1,5 +1,6 @@
 import { camelCase, pascalCase } from "change-case";
 import { isArray, isNotArray } from "../../../helpers/arrayTools";
+import { isEmptyObject } from "../../../helpers/objectTools";
 
 export const goMapper = (jString: string, name: string = "StructName") => {
 
@@ -11,20 +12,28 @@ export const goMapper = (jString: string, name: string = "StructName") => {
         const value = jStringAsObject[key];
         const type = typeof jStringAsObject[key];
         const attr = camelCase(key);
+        const typeLength = type === 'boolean' ? type.length - 2: type.length + 1;
 
-        typeMaxLength = Math.max(typeMaxLength, type.length);
+        typeMaxLength = Math.max(typeMaxLength, typeLength);
         keyMaxLength = Math.max(keyMaxLength, attr.length + 1);
 
         if (type === 'object') {
             // empty object
-            typeMaxLength = Math.max(typeMaxLength, type.length + 3);
+            typeMaxLength = Math.max(typeMaxLength, attr.length + 1);
+            if (isEmptyObject(value)) {
+                // 23 is length os string `map[string]interface{}` + space
+                typeMaxLength = Math.max(typeMaxLength, 23);
+            }
+
             if (isArray(value)) {
                 if (value.length) {
                     // not empty array
+                    // 3 is length of string empty string+space ` []`
                     typeMaxLength = Math.max(typeMaxLength, attr.length + 3);
                 } else {
-                    // empty array
-                    typeMaxLength = Math.max(typeMaxLength, type.length + 8);
+                    // empty array.
+                    // 14 is length of string `[]interface{}`
+                    typeMaxLength = Math.max(typeMaxLength, 14);
                 }
             }
         }
@@ -86,7 +95,7 @@ export const getType = (value: string): string => {
         case "boolean":
             return "bool";
         case "object":
-            return "struct{}";
+            return "map[string]interface{}";
         default:
             return "interface{}";
     }
