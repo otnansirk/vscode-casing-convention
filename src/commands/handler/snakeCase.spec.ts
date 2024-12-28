@@ -5,6 +5,14 @@ describe('snakeCase', function() {
 
   const TEST_CASES = [
     {
+      input: "JavascriptForMe",
+      expected: "javascript_for_me"
+    },
+    {
+      input: "javascriptForMe",
+      expected: "javascript_for_me"
+    },
+    {
       input: "Javascript",
       expected: "javascript"
     },
