@@ -10,7 +10,7 @@ import * as vscode from 'vscode';
 
 
 export const translation = async (text: string) => {
-    try {
+      try {
       let languageSelections = languages;
       const translationSetting = vscode.workspace.getConfiguration('casing-convention.translation');
       const defaultTranslateTo: string = translationSetting.get("defaultTargetLanguage", "");
@@ -25,10 +25,11 @@ export const translation = async (text: string) => {
         canPickMany: false,
         title: "Translate to"
       });
-      return translate(text, targetLanguage?.value);
+      return await translate(text, targetLanguage?.value);
     } catch (error) {
-      console.log(error, "Select language");
+      console.log(error, "Error translation");
     }    
+    return text;
 };
 
 export const translate = async (text: string, to: string="id") => {
@@ -46,7 +47,7 @@ export const translate = async (text: string, to: string="id") => {
         mode: '1',
         sp: 'nmt',
         tc: '2',
-        tk: gtranslateToken,
+        tk: gtranslateToken.value,
         q
       };
 
@@ -61,6 +62,8 @@ export const translate = async (text: string, to: string="id") => {
 
       return tx.join("\n");
     } catch (error) {
-      console.log(error, "KRIS");
-    }    
+      console.log(error, "Error translate");
+    }
+
+    return text;
 };
