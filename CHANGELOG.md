@@ -111,3 +111,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v1.2.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.2.2
 [v1.3.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.3.0
 [v1.4.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.4.0
+[v1.5.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.5.0
+[v2.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.0
