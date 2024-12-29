@@ -1,10 +1,10 @@
 /**
- * Convert json to url params
+ * Convert object to url params
  * 
  * @param objData object
  * @returns 
  */
-export const json2UrlParams = (objData: object) => {
+export const object2UrlParams = (objData: object) => {
     const params = new URLSearchParams();
     Object.entries(objData).forEach(([key, value]) => {
     if (Array.isArray(value)) {
