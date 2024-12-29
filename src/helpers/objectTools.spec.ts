@@ -16,6 +16,10 @@ describe('isEmptyObject', () => {
       input: 'aku',
       expected: false
     },
+    {
+      input: null,
+      expected: false
+    },
   ];
 
   TASE_CASES.forEach(({input, expected}) => {
