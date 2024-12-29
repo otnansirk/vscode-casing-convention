@@ -7,6 +7,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v2.0.1] - 2024-12-29
+
+### Update Docs
+- update readme documentation
+
 ## [v2.0.0] - 2024-12-29
 
 ### Refactor
@@ -113,3 +118,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v1.4.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.4.0
 [v1.5.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.5.0
 [v2.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.0
+[v2.0.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.1
