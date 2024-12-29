@@ -12,6 +12,7 @@ export const goMapper = (jString: string, name: string = "StructName") => {
     for (const key of Object.keys(jStringAsObject)) {
         const value = jStringAsObject[key];
         const type = typeof jStringAsObject[key];
+        
         const attr = camelCase(key);
         const typeLength = type === 'boolean' ? type.length - 2: type.length + 1;
 
@@ -19,8 +20,8 @@ export const goMapper = (jString: string, name: string = "StructName") => {
         keyMaxLength = Math.max(keyMaxLength, attr.length + 1);
 
         if (type === 'object') {
-            // empty object
             typeMaxLength = Math.max(typeMaxLength, attr.length + 1);
+            
             if (isEmptyObject(value)) {
                 // 23 is length os string `map[string]interface{}` + space
                 typeMaxLength = Math.max(typeMaxLength, 23);
@@ -36,6 +37,11 @@ export const goMapper = (jString: string, name: string = "StructName") => {
                     // 14 is length of string `[]interface{}`
                     typeMaxLength = Math.max(typeMaxLength, 14);
                 }
+            }
+
+            if (value === null) {
+                // 13 is length of string `*interface{}`
+                typeMaxLength = Math.max(typeMaxLength, 13);
             }
         }
     }
@@ -55,29 +61,32 @@ const structGenerator = (data: any, name: string, keyMaxLength= 0, typeMaxLength
         let attr = pascalCase(key);
         let type = getType(dataValue);
 
-        if (dataType === 'object' && isNotArray(dataValue) && Object.keys(dataValue).length) {
-            type = pascalCase(key);
-            memberOfStructs.push(
-                goMapper(
-                    JSON.stringify(data[key]),
-                    pascalCase(key)
-                )
-            );
-        }
-        if (dataType === 'object' && isArray(dataValue)) {
-            const arrayValueType = typeof dataValue[0];
-            const isObject = arrayValueType === "object";
-            if (isObject) {
+        if (dataValue !== null) {
+            if (dataType === 'object' && isNotArray(dataValue) && Object.keys(dataValue).length) {
+                type = pascalCase(key);
                 memberOfStructs.push(
                     goMapper(
-                        JSON.stringify(dataValue[0]),
+                        JSON.stringify(data[key]),
                         pascalCase(key)
                     )
                 );
             }
-            type = isObject ? `[]${pascalCase(key)}` : `[]${getType(dataValue[0])}`;
-        }
 
+            if (dataType === 'object' && isArray(dataValue)) {
+                const arrayValueType = typeof dataValue[0];
+                const isObject = arrayValueType === "object";
+                if (isObject) {
+                    memberOfStructs.push(
+                        goMapper(
+                            JSON.stringify(dataValue[0]),
+                            pascalCase(key)
+                        )
+                    );
+                }
+                type = isObject ? `[]${pascalCase(key)}` : `[]${getType(dataValue[0])}`;
+            }
+        }
+        
         stringTypes.push(`    ${attr.padEnd(keyMaxLength)}${type.padEnd(typeMaxLength)}\`json:"${snakeCase(key)}"\``);
     }
 
@@ -88,6 +97,10 @@ const structGenerator = (data: any, name: string, keyMaxLength= 0, typeMaxLength
 
 
 export const getType = (value: string): string => {
+    if (value === null) {
+        return "*interface{}";
+    }
+
     switch (typeof value) {
         case "string":
             return "string";
