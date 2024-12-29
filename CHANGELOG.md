@@ -103,7 +103,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Create LICENSE
 - Initial commit
 
-[Unreleased]: https://github.com/otnansirk/vscode-casing-convention/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/otnansirk/vscode-casing-convention/compare/v2.0.0...HEAD
 [v1.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.0.0
 [v1.1.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.0
 [v1.1.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.1.1
