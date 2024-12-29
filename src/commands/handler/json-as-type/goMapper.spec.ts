@@ -11,9 +11,11 @@ describe('goMapper', function() {
 `
     },
     {
-      input: `{"address":{"name":"ponorogo"}}`,
+      input: `{"address":{"name":"ponorogo"}, "hoby":{}, "lastName": "otnansirk"}`,
       expected: `type StructName struct {
-    Address Address \`json:"address"\`
+    Address  Address                \`json:"address"\`
+    Hoby     map[string]interface{} \`json:"hoby"\`
+    LastName string                 \`json:"last_name"\`
 }
 
 type Address struct {
