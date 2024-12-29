@@ -30,6 +30,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ### Deprecated
 - json2Params move to object2Params
+- Array helper move to arrayTools
 
 ## [v1.5.0] - 2024-12-14
 
