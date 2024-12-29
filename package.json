@@ -20,8 +20,7 @@
         "pretest": "yarn run compile && yarn run lint",
         "lint": "eslint src --ext ts",
         "test": "mocha -r ts-node/register",
-        "cov": "nyc yarn run test && istanbul-badges-readme",
-        "badges": "istanbul-badges-readme"
+        "cov": "nyc yarn run test && istanbul-badges-readme"
     },
     "devDependencies": {
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
