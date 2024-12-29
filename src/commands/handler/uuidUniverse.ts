@@ -11,7 +11,7 @@ type FunctionMap = {
     [key: string]: () => string; 
 };
 
-export const uuidTools = async () => {
+export const uuidUniverse = async () => {
     const options = [
         {value: "uuidv4", label: "UUID v4"},
         {value: "uuidv6", label: "UUID v6"},

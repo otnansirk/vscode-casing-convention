@@ -218,7 +218,7 @@
                 "title": "casing: JSON as Type"
             },
             {
-                "command": "casing-convention.uuidTools",
+                "command": "casing-convention.uuidUniverse",
                 "title": "casing: UUID Universe"
             },
             {

@@ -33,7 +33,7 @@ import { snakeCase } from "./handler/snakeCase";
 import { base64Decode } from "./handler/base64Decode";
 import { base64Encode } from "./handler/base64Encode";
 import { jsonAsType } from "./handler/jsonAsType";
-import { uuidTools } from "./handler/uuidTools";
+import { uuidUniverse } from "./handler/uuidUniverse";
 import { translation } from "./handler/translation";
 import { lowerCase } from "./handler/lowerCase";
 import { upperCase } from "./handler/upperCase";
@@ -327,11 +327,11 @@ const commandRegister: CommandType[] = [
   },
   {
     type: COMMAND_TYPE_HANDLER,
-    name: 'casing-convention.uuidTools',
+    name: 'casing-convention.uuidUniverse',
     label: 'UUID Universe',
     description: '',
     detail: 'UUID Universe.',
-    callback: commandProvider(uuidTools, false)
+    callback: commandProvider(uuidUniverse, false)
   },
   {
     type: COMMAND_TYPE_HANDLER,
