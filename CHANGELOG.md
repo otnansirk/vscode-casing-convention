@@ -7,6 +7,30 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v2.0.0] - 2024-12-29
+
+### Refactor
+- Folder and file structure
+
+### New Features
+- Translation
+    + Hover translation
+    + Selection translation
+    + Code action translation
+
+### Improvement
+- Change message toast to status bar
+- Upgrade compiler option to ES2022
+- Improve style formating for Json as type (Go struct)
+
+### Fixed Bug
+- Snake case transform
+- Lower case handle tab and camelCase
+- Upper case handle tab and camelCase
+
+### Deprecated
+- json2Params move to object2Params
+
 ## [v1.5.0] - 2024-12-14
 
 ### New Features
