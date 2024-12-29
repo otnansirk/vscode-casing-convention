@@ -3,7 +3,7 @@ import {
   languages,
   QuickPickItemWithValue
 } from '../../helpers/languages';
-import { json2UrlParams } from '../../helpers/json2UrlParams';
+import { object2UrlParams } from '../../helpers/object2UrlParams';
 import * as token from 'google-translate-token';
 import { randomUUID } from 'crypto';
 import * as vscode from 'vscode';
@@ -50,7 +50,7 @@ export const translate = async (text: string, to: string="id") => {
         q
       };
 
-      const params   = json2UrlParams(queryObject);
+      const params   = object2UrlParams(queryObject);
       const response = await fetch(`https://translate.googleapis.com/translate_a/t?${params}`, {method: 'POST'});
       const data = await response.json();
       const tx = data.map((items:Array<[string, string]>) => {
