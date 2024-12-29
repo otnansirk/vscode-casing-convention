@@ -6,7 +6,9 @@
         "src/**/!(*.spec.*).[tj]s?(x)"
     ],
     "exclude": [
-        "src/commands/**/*.*",
+        "src/code-actions/**/*.*",
+        "src/hovers/**/*.*",
+        "src/commands/*.ts",
         "src/exception/**/*.*",
         "src/extension.ts"
     ],

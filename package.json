@@ -20,7 +20,8 @@
         "pretest": "yarn run compile && yarn run lint",
         "lint": "eslint src --ext ts",
         "test": "mocha -r ts-node/register",
-        "cov": "nyc yarn run test && istanbul-badges-readme"
+        "cov": "nyc yarn run test && istanbul-badges-readme",
+        "badges": "istanbul-badges-readme"
     },
     "devDependencies": {
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
@@ -30,7 +31,6 @@
         "@types/vscode": "^1.79.0",
         "@typescript-eslint/eslint-plugin": "^5.59.8",
         "@typescript-eslint/parser": "^5.59.8",
-        "@vscode/test-electron": "^2.3.2",
         "eslint": "^8.41.0",
         "glob": "^8.1.0",
         "istanbul-badges-readme": "^1.8.5",
