@@ -34,6 +34,12 @@ However, you must first add [Extension Setting](#extension-setting) to your keyb
 
 Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) to create a custom keyboard shortcut
 
+## Settings
+Search `Casing Convention` on setting ui search bar.
+- *casing-convention.translation.defaultTargetLanguage* : Select the default target language.
+- *casing-convention.translation-hover.translateOnHover* : Enable/Disable translate on hover
+
+
 ## Features
 
 - **camelCase**: Convert text to `camelCase`. This convention capitalizes the first letter of each word except the first one, and removes spaces or special characters between words.
@@ -98,8 +104,25 @@ Read on [this page](https://code.visualstudio.com/docs/getstarted/keybindings) t
 
 - **base64Decode**: Decodes from Base64.
 
+- **uuidUniverse**: Generate uuid.
+    - Features
+        - *uuidv1* : Generate uuid v1
+        - *uuidv4* : Generate uuid v4
+        - *uuidv6* : Generate uuid v6
+        - *uuidv7* : Generate uuid v7
+        - *uuidNil* : Generate uuid Nil / Empty
+
 - **JSON as Type**: 
-    - *Go Struct* : Transform JSON to Go Struct
+    - Features
+        - *Go Struct* : Transform JSON to Go Struct
+
+- **Translation**: 
+    - Features
+        - *Bulb Action* : Translate base on click by bulb icon
+        - *Hover Action* : Translate by hovering over the text
+    - Setting
+        - *casing-convention.translation.defaultTargetLanguage* : Select the default target language.
+        - *casing-convention.translation-hover.translateOnHover* : Enable/Disable translate on hover
 
 These casing conventions provide flexible options to transform your text according to specific requirements.
 
@@ -140,6 +163,8 @@ To use the extension, you can execute the following commands:
 - `casing-convention.base64Encode`: Encodes to base64.
 - `casing-convention.base64Decode`: Decodes from base64.
 - `casing-convention.jsonAsType`: Convert JSON to types
+- `casing-convention.uuidUniverse`: Generate uuid
+- `casing-convention.translation`: Text translation
 
 ## Reporting issues
 Report any issues on the github [issues page](https://github.com/otnansirk/vscode-casing-convention/issues). Follow the template and add as much information as possible.
