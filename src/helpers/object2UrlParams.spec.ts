@@ -1,5 +1,4 @@
 import { strictEqual } from "assert";
-import { isOnlySpaces } from "./isOnlySpace";
 import { object2UrlParams } from "./object2UrlParams";
 
 describe('object2UrlParams', () => {
