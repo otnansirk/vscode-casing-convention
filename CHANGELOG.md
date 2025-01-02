@@ -10,6 +10,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [v2.1.1] - 2024-01-02
 ### Fixed Bug
 - Snake case always convert to one line
+- Completed Test case for kebabCase and screamKebabCase
+- Json as types typescript mapper
+- Test case ts mapper
 
 ## [v2.1.0] - 2024-01-02
 
