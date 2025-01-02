@@ -25,12 +25,12 @@ export const jsonAsType = async (jString: string): Promise<string> => {
 const runHandler = (jString: string, name: string | undefined) => {
     const fileType = vscode.window.activeTextEditor?.document.languageId;
     if (fileType === GO_TYPE) {
-        const structName = name? name : "TypeName";
+        const structName = name? name : "StructName";
         return goMapper(jString, structName);
     }
 
     if (fileType === TS_TYPE) {
-        const structName = name? name : "StructName";
+        const structName = name? name : "TypeName";
         return tsMapper(jString, structName);
     }
 
