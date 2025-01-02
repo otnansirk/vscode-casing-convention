@@ -22,7 +22,7 @@ describe('snakeCase', function() {
     },
     {
       input: "Have - holan : network\noke bos",
-      expected: "have_-_holan_:_network\noke_bos"
+      expected: "have_holan_:_network\noke_bos"
     },
   ];
 
