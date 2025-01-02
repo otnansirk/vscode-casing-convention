@@ -11,10 +11,10 @@ export const goMapper = (jString: string, name: string = "StructName") => {
 
     for (const key of Object.keys(jStringAsObject)) {
         const value = jStringAsObject[key];
-        const type = typeof jStringAsObject[key];
-        
+        const type = typeof value;
+
         const attr = camelCase(key);
-        const typeLength = type === 'boolean' ? type.length - 2: type.length + 1;
+        const typeLength = ['boolean', 'number'].includes(type) ? getType(value).length + 1: type.length + 1;
 
         typeMaxLength = Math.max(typeMaxLength, typeLength);
         keyMaxLength = Math.max(keyMaxLength, attr.length + 1);
