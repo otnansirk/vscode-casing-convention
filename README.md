@@ -115,6 +115,7 @@ Search `Casing Convention` on setting ui search bar.
 - **JSON as Type**: 
     - Features
         - *Go Struct* : Transform JSON to Go Struct
+        - *Typescript Types* : Transform JSON to Typescipt types
 
 - **Translation**: 
     - Features

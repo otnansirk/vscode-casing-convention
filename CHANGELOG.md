@@ -7,10 +7,22 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v2.1.0] - 2024-01-02
+
+### New Features
+- JSON as type
+    + Transform JSON to typescript types
+
+### Fixed Bug
+- Handle character `.` and `-` for transform to snake case
+
+### Improvement
+- Format JSON to go struct
+
 ## [v2.0.1] - 2024-12-29
 
 ### Update Docs
-- update readme documentation
+- Update readme documentation
 
 ## [v2.0.0] - 2024-12-29
 
@@ -119,3 +131,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v1.5.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v1.5.0
 [v2.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.0
 [v2.0.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.1
+[v2.2.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.1.0
