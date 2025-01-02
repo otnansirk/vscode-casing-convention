@@ -19,20 +19,19 @@ export const jsonAsType = async (jString: string): Promise<string> => {
         prompt: 'Enter root type/struct name'
     });
 
-    if (!structName) {
-        structName = "StructName";
-    }
-
     return runHandler(jString, structName);
 };
 
-const runHandler = (jString: string, name: string) => {
+const runHandler = (jString: string, name: string | undefined) => {
     const fileType = vscode.window.activeTextEditor?.document.languageId;
     if (fileType === GO_TYPE) {
-        return goMapper(jString, name);
+        const structName = name? name : "TypeName";
+        return goMapper(jString, structName);
     }
+
     if (fileType === TS_TYPE) {
-        return tsMapper(jString, name);
+        const structName = name? name : "StructName";
+        return tsMapper(jString, structName);
     }
 
     return jString;
