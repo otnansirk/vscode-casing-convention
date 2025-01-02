@@ -20,6 +20,10 @@ describe('kebabCase', function() {
       input: "KRIS_HowAreYOU",
       expected: "kris-how-are-you"
     },
+    {
+      input: "",
+      expected: ""
+    },
   ];
 
   TEST_CASES.forEach(({input, expected}: any) => {
