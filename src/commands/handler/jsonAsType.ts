@@ -1,13 +1,17 @@
 import HasNoSelected from "../../exception/HasNoSelected";
 import { goMapper } from "./json-as-type/goMapper";
+import { tsMapper } from "./json-as-type/tsMapper";
 import * as vscode from 'vscode';
 
-const SUPPORT_FILES = ["go"];
+const GO_TYPE = "go";
+const TS_TYPE = "typescript";
+const SUPPORT_FILES = [GO_TYPE, TS_TYPE];
 
 export const jsonAsType = async (jString: string): Promise<string> => {
     const fileType: string = vscode.window.activeTextEditor?.document.languageId ?? "";
+    
     if (!SUPPORT_FILES.includes(fileType)) {
-        throw new HasNoSelected(`The file extension is not supported, currently support only: [.go](https://go.dev)`);
+        throw new HasNoSelected(`The file extension is not supported, currently support only: [.go](https://go.dev), [typescript](https://www.typescriptlang.org)`);
     }
 
     let structName = await vscode.window.showInputBox({
@@ -24,8 +28,11 @@ export const jsonAsType = async (jString: string): Promise<string> => {
 
 const runHandler = (jString: string, name: string) => {
     const fileType = vscode.window.activeTextEditor?.document.languageId;
-    if (fileType === 'go') {
+    if (fileType === GO_TYPE) {
         return goMapper(jString, name);
+    }
+    if (fileType === TS_TYPE) {
+        return tsMapper(jString, name);
     }
 
     return jString;
