@@ -7,6 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v2.1.1] - 2024-01-02
+### Fixed Bug
+- Snake case always convert to one line
+
 ## [v2.1.0] - 2024-01-02
 
 ### New Features
@@ -132,3 +136,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v2.0.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.0
 [v2.0.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.1
 [v2.1.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.1.0
+[v2.1.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.1.1
