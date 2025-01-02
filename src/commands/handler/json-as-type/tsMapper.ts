@@ -13,7 +13,7 @@ export const tsMapper = (jString: string, name: string = "TypeName") => {
         const type = typeof jStringAsObject[key];
 
         const attr = camelCase(key);
-        const typeLength = type === 'boolean' ? type.length - 2: type.length + 1;
+        const typeLength = type.length + 1;
 
         typeMaxLength = Math.max(typeMaxLength, typeLength);
         keyMaxLength = Math.max(keyMaxLength, attr.length + 1);
@@ -22,8 +22,8 @@ export const tsMapper = (jString: string, name: string = "TypeName") => {
             typeMaxLength = Math.max(typeMaxLength, attr.length + 1);
 
             if (isEmptyObject(value)) {
-                // 23 is length os string `map[string]interface{}` + space
-                typeMaxLength = Math.max(typeMaxLength, 23);
+                // 20 is length os string `Record<string, any> `
+                typeMaxLength = Math.max(typeMaxLength, 20);
             }
 
             if (isArray(value)) {
@@ -33,14 +33,14 @@ export const tsMapper = (jString: string, name: string = "TypeName") => {
                     typeMaxLength = Math.max(typeMaxLength, attr.length + 3);
                 } else {
                     // empty array.
-                    // 14 is length of string `[]interface{}`
-                    typeMaxLength = Math.max(typeMaxLength, 14);
+                    // 6 is length of string `any[] `
+                    typeMaxLength = Math.max(typeMaxLength, 6);
                 }
             }
 
             if (value === null) {
-                // 13 is length of string `*interface{}`
-                typeMaxLength = Math.max(typeMaxLength, 13);
+                // 5 is length of string `null`
+                typeMaxLength = Math.max(typeMaxLength, 5);
             }
         }
     }
@@ -86,7 +86,7 @@ const typeGenerator = (data: any, name: string, keyMaxLength= 0, typeMaxLength= 
             }
         }
 
-        stringTypes.push(`    ${attr.padEnd(keyMaxLength)} : ${type};`);
+        stringTypes.push(`    ${attr.padEnd(keyMaxLength)}: ${type};`);
     }
 
     stringTypes.push('}');
