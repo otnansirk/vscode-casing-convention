@@ -12,8 +12,8 @@ export const kebabCase = (str: string): string => {
                 .replace(/([a-z])([A-Z])/g, '$1-$2') // Convert camelCase to camel-case
                 .replace(/[^a-zA-Z]+/g, '-') // Change all character besides the alfabet to - 
                 .replace(/\s+/g, '-') // Change space to '-'
-                .replace(/[\s-]+$/, ''); // Remove space and - in end of character
-            // .toLowerCase()
+                .replace(/[\s-]+$/, '') // Remove space and - in end of character
+                .toLowerCase();
             return leadingSpace + result;
         })
         .join('\n') ?? '';
