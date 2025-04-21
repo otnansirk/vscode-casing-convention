@@ -16,4 +16,4 @@ export const snakeCase = (text: string): string => {
             return leadingSpace + result;
         })
         .join('\n') ?? '';
-}
+};
