@@ -14,4 +14,4 @@ export const camelCase = (str: string): string => {
             return leadingSpace + toCamelCase(str);
         })
         .join('\n') ?? '';
-}
+};

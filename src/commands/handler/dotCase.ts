@@ -13,4 +13,4 @@ export const dotCase = (str: string): string => {
             return leadingSpace + toDotCase(str);
         })
         .join('\n') ?? '';
-}
+};

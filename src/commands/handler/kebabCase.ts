@@ -17,4 +17,4 @@ export const kebabCase = (str: string): string => {
             return leadingSpace + result;
         })
         .join('\n') ?? '';
-}
+};
