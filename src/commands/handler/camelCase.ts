@@ -1,5 +1,9 @@
+import {
+    camelCase as toCamelCase
+} from 'change-case';
+
 /**
- * Convert the character of an input string to kebab-case.
+ * Convert the character of an input string to camelCase.
  *
  * @returns
  */
@@ -7,10 +11,7 @@ export const camelCase = (str: string): string => {
     return str.split('\n')
         ?.map((str) => {
             const leadingSpace = str.match(/^(\s*)/)?.[0] ?? "";
-            const result = str
-                .replace(/^[\s_-]+/, '') // Remove leading spaces, underscores, or hyphens
-                .replace(/[\s_-]+(.)?/g, (_, c) => c ? c.toUpperCase() : ''); // Capitalize letters after space, underscore, or hyphen
-            return leadingSpace + result;
+            return leadingSpace + toCamelCase(str);
         })
         .join('\n') ?? '';
 }
