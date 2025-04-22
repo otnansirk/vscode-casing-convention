@@ -7,6 +7,26 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [v2.1.2] - 2025-04-23
+### Fixed Bug
+Fixed support for multiple lines for :
+- First lowercase
+- kebab case
+- camel case
+- dot case
+- lower case
+- snake case
+- camelCase
+- constantCase
+- dotCase
+- headerCase
+- noCase
+- paramCase
+- pascalCase
+- pathCase
+- sentenceCase
+
+
 ## [v2.1.1] - 2024-01-02
 ### Fixed Bug
 - Snake case always convert to one line
@@ -140,3 +160,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 [v2.0.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.0.1
 [v2.1.0]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.1.0
 [v2.1.1]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.1.1
+[v2.1.2]: https://github.com/otnansirk/vscode-casing-convention/releases/tag/v2.1.2
