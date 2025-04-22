@@ -9,7 +9,7 @@ export const snakeCase = (text: string): string => {
                 .replace(/^(\s+)/, '')
                 .replace(/([a-z])([A-Z])/g, '$1_$2')
                 .replace(/[-. \t\\]+/g, "_")
-                .replace(/[^a-zA-Z0-9_]/g, '')
+                .replace(/[^a-zA-Z0-9_]/g, '_')
                 .replace(/[_]+/g, "_")
                 .replace(/[\s_]+$/, '') // Remove space and _ in end of character
                 .toLowerCase();

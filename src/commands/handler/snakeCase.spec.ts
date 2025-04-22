@@ -1,7 +1,7 @@
 import { strictEqual } from "assert";
 import { snakeCase } from "./snakeCase";
 
-describe('snakeCase', function() {
+describe('snakeCase', function () {
 
   const TEST_CASES = [
     {
@@ -18,16 +18,18 @@ describe('snakeCase', function() {
     },
     {
       input: "Hi,kris how are you ?",
-      expected: "hi,kris_how_are_you_?"
+      expected: "hi_kris_how_are_you"
     },
     {
-      input: "Have - holan : network\noke bos",
-      expected: "have_holan_:_network\noke_bos"
+      input: `  Have - holan : network
+      oke bos`,
+      expected: `  have_holan_network
+      oke_bos`
     },
   ];
 
-  TEST_CASES.forEach(({input, expected}: any) => {
-    it(`Sould convert ${input} to ${expected}`, function() {
+  TEST_CASES.forEach(({ input, expected }: any) => {
+    it(`Sould convert ${input} to ${expected}`, function () {
       let result = snakeCase(input);
       strictEqual(result, expected);
     });
