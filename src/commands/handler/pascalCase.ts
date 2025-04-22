@@ -10,8 +10,8 @@ import {
 export const pascalCase = (str: string): string => {
     return str.split('\n')
         ?.map((str) => {
-            const leadingSpace = str.match(/^(\s*)/)?.[0] ?? "";
+            const leadingSpace = str.match(/^(\s*)/)?.[0];
             return leadingSpace + toPascalCase(str);
         })
-        .join('\n') ?? '';
+        .join('\n');
 };
