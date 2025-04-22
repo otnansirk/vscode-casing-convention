@@ -1,7 +1,9 @@
+import { constantCase as toConstantCase } from 'change-case';
+
 /**
- * Transform text to snake_case
+ * Transform text to CONSTANT_CASE
  */
-export const snakeCase = (text: string): string => {
+export const constantCase = (text: string): string => {
     return text.split('\n')
         ?.map((str) => {
             const leadingSpace = str.match(/^(\s*)/)?.[0] ?? "";
@@ -11,8 +13,8 @@ export const snakeCase = (text: string): string => {
                 .replace(/[-. \t\\]+/g, "_")
                 .replace(/[^a-zA-Z0-9_]/g, '')
                 .replace(/[_]+/g, "_")
-                .replace(/[\s_]+$/, '') // Remove space and _ in end of character
-                .toLowerCase();
+                .replace(/[\s_]+$/, '') // Remove space and - in end of character
+                .toUpperCase();
             return leadingSpace + result;
         })
         .join('\n') ?? '';
