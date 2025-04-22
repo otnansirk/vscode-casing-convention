@@ -1,38 +1,38 @@
 import { strictEqual } from "assert";
-import { lowerCaseFirst } from "./lowerCaseFirst";
+import { pathCase } from "./pathCase";
 
-describe('lowerCaseFirst', function () {
+describe('pathCase', function () {
 
   const TEST_CASES = [
     {
       input: "Javascript",
-      expected: "jAVASCRIPT"
+      expected: "javascript"
     },
     {
       input: "Hi,kris how are you ?",
-      expected: "hI,KRIS HOW ARE YOU ?"
+      expected: "hi/kris/how/are/you"
     },
     {
       input: "Hi, KRIS HowAreYou",
-      expected: "hI, KRIS HOW ARE YOU"
+      expected: "hi/kris/how/are/you"
     },
     {
       input: "KRIS_HowAreYOU",
-      expected: "kRIS_HOW ARE YOU"
+      expected: "kris/how/are/you"
     },
     {
       input: "HOW ARE YOU",
-      expected: "hOW ARE YOU"
+      expected: "how/are/you"
     },
     {
       input: "How Are YOU",
-      expected: "hOW ARE YOU"
+      expected: "how/are/you"
     },
     {
       input: `   How Are YOU
       hOW ARE YOU`,
-      expected: `   hOW ARE YOU
-      h OW ARE YOU`
+      expected: `   how/are/you
+      h/ow/are/you`
     },
     {
       input: " ",
@@ -42,7 +42,7 @@ describe('lowerCaseFirst', function () {
 
   TEST_CASES.forEach(({ input, expected }: any) => {
     it(`Sould convert ${input} to ${expected}`, function () {
-      let result = lowerCaseFirst(input);
+      let result = pathCase(input);
       strictEqual(result, expected);
     });
   });

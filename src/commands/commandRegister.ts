@@ -1,15 +1,4 @@
 import * as vscode from "vscode";
-import {
-  camelCase,
-  constantCase,
-  dotCase,
-  headerCase,
-  noCase,
-  paramCase,
-  pascalCase,
-  pathCase,
-  sentenceCase,
-} from "change-case";
 import { lowerCaseFirst } from "./handler/lowerCaseFirst";
 import { upperCaseFirst } from "./handler/upperCaseFirst";
 import { titleCase } from "./handler/titleCase";
@@ -37,6 +26,15 @@ import { uuidUniverse } from "./handler/uuidUniverse";
 import { translation } from "./handler/translation";
 import { lowerCase } from "./handler/lowerCase";
 import { upperCase } from "./handler/upperCase";
+import { camelCase } from "./handler/camelCase";
+import { dotCase } from "./handler/dotCase";
+import { constantCase } from "./handler/constantCase";
+import { headerCase } from "./handler/headerCase";
+import { noCase } from "./handler/noCase";
+import { paramCase } from "./handler/paramCase";
+import { pascalCase } from "./handler/pascalCase";
+import { pathCase } from "./handler/pathCase";
+import { sentenceCase } from "./handler/sentenceCase";
 
 
 type CommandType = {

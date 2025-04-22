@@ -1,36 +1,36 @@
 import { strictEqual } from "assert";
-import { capitalCase } from "./capitalCase";
+import { camelCase } from "./camelCase";
 
-describe('CapitalCase', function () {
+describe('camelCase', function () {
 
   const TEST_CASES = [
     {
       input: "javascript",
-      expected: "Javascript"
+      expected: "javascript"
     },
     {
       input: "Hi, kris how are you ?",
-      expected: "Hi, Kris How Are You ?"
+      expected: "hiKrisHowAreYou"
     },
     {
       input: "Hi, KRIS HowAreYou",
-      expected: "Hi, Kris Howareyou"
+      expected: "hiKrisHowAreYou"
     },
     {
       input: "KRIS_HowAreYOU",
-      expected: "Kris_howareyou"
+      expected: "krisHowAreYou"
     },
     {
       input: `  Have - holan : network
       oke bos`,
-      expected: `  Have - Holan : Network
-      Oke Bos`
+      expected: `  haveHolanNetwork
+      okeBos`
     },
   ];
 
   TEST_CASES.forEach(({ input, expected }: any) => {
     it(`Sould convert ${input} to ${expected}`, function () {
-      let result = capitalCase(input);
+      let result = camelCase(input);
       strictEqual(result, expected);
     });
   });

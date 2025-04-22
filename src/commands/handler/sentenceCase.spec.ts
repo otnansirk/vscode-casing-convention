@@ -1,38 +1,38 @@
 import { strictEqual } from "assert";
-import { lowerCaseFirst } from "./lowerCaseFirst";
+import { sentenceCase } from "./sentenceCase";
 
-describe('lowerCaseFirst', function () {
+describe('sentenceCase', function () {
 
   const TEST_CASES = [
     {
       input: "Javascript",
-      expected: "jAVASCRIPT"
+      expected: "Javascript"
     },
     {
       input: "Hi,kris how are you ?",
-      expected: "hI,KRIS HOW ARE YOU ?"
+      expected: "Hi kris how are you"
     },
     {
       input: "Hi, KRIS HowAreYou",
-      expected: "hI, KRIS HOW ARE YOU"
+      expected: "Hi kris how are you"
     },
     {
       input: "KRIS_HowAreYOU",
-      expected: "kRIS_HOW ARE YOU"
+      expected: "Kris how are you"
     },
     {
       input: "HOW ARE YOU",
-      expected: "hOW ARE YOU"
+      expected: "How are you"
     },
     {
       input: "How Are YOU",
-      expected: "hOW ARE YOU"
+      expected: "How are you"
     },
     {
       input: `   How Are YOU
       hOW ARE YOU`,
-      expected: `   hOW ARE YOU
-      h OW ARE YOU`
+      expected: `   How are you
+      H ow are you`
     },
     {
       input: " ",
@@ -42,7 +42,7 @@ describe('lowerCaseFirst', function () {
 
   TEST_CASES.forEach(({ input, expected }: any) => {
     it(`Sould convert ${input} to ${expected}`, function () {
-      let result = lowerCaseFirst(input);
+      let result = sentenceCase(input);
       strictEqual(result, expected);
     });
   });

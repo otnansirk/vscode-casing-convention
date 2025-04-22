@@ -1,36 +1,36 @@
 import { strictEqual } from "assert";
-import { capitalCase } from "./capitalCase";
+import { dotCase } from "./dotCase";
 
-describe('CapitalCase', function () {
+describe('dot.case', function () {
 
   const TEST_CASES = [
     {
       input: "javascript",
-      expected: "Javascript"
+      expected: "javascript"
     },
     {
       input: "Hi, kris how are you ?",
-      expected: "Hi, Kris How Are You ?"
+      expected: "hi.kris.how.are.you"
     },
     {
       input: "Hi, KRIS HowAreYou",
-      expected: "Hi, Kris Howareyou"
+      expected: "hi.kris.how.are.you"
     },
     {
       input: "KRIS_HowAreYOU",
-      expected: "Kris_howareyou"
+      expected: "kris.how.are.you"
     },
     {
       input: `  Have - holan : network
       oke bos`,
-      expected: `  Have - Holan : Network
-      Oke Bos`
+      expected: `  have.holan.network
+      oke.bos`
     },
   ];
 
   TEST_CASES.forEach(({ input, expected }: any) => {
     it(`Sould convert ${input} to ${expected}`, function () {
-      let result = capitalCase(input);
+      let result = dotCase(input);
       strictEqual(result, expected);
     });
   });

@@ -1,7 +1,7 @@
 import { strictEqual } from "assert";
-import { capitalCase } from "./capitalCase";
+import { headerCase } from "./headerCase";
 
-describe('CapitalCase', function () {
+describe('headerCase', function () {
 
   const TEST_CASES = [
     {
@@ -10,27 +10,31 @@ describe('CapitalCase', function () {
     },
     {
       input: "Hi, kris how are you ?",
-      expected: "Hi, Kris How Are You ?"
+      expected: "Hi-Kris-How-Are-You"
     },
     {
       input: "Hi, KRIS HowAreYou",
-      expected: "Hi, Kris Howareyou"
+      expected: "Hi-Kris-How-Are-You"
     },
     {
       input: "KRIS_HowAreYOU",
-      expected: "Kris_howareyou"
+      expected: "Kris-How-Are-You"
     },
     {
       input: `  Have - holan : network
       oke bos`,
-      expected: `  Have - Holan : Network
-      Oke Bos`
+      expected: `  Have-Holan-Network
+      Oke-Bos`
+    },
+    {
+      input: "&",
+      expected: ""
     },
   ];
 
   TEST_CASES.forEach(({ input, expected }: any) => {
     it(`Sould convert ${input} to ${expected}`, function () {
-      let result = capitalCase(input);
+      let result = headerCase(input);
       strictEqual(result, expected);
     });
   });
