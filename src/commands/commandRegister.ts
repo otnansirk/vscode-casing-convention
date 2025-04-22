@@ -1,6 +1,5 @@
 import * as vscode from "vscode";
 import {
-  noCase,
   paramCase,
   pascalCase,
   pathCase,
@@ -37,6 +36,7 @@ import { camelCase } from "./handler/camelCase";
 import { dotCase } from "./handler/dotCase";
 import { constantCase } from "./handler/constantCase";
 import { headerCase } from "./handler/headerCase";
+import { noCase } from "./handler/noCase";
 
 
 type CommandType = {
