@@ -34,6 +34,10 @@ describe('lowerCaseFirst', function () {
       expected: `   hOW ARE YOU
       h OW ARE YOU`
     },
+    {
+      input: " ",
+      expected: " "
+    },
   ];
 
   TEST_CASES.forEach(({ input, expected }: any) => {

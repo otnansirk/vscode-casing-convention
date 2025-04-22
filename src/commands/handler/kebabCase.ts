@@ -6,7 +6,7 @@
 export const kebabCase = (str: string): string => {
     return str.split('\n')
         ?.map((str) => {
-            const leadingSpace = str.match(/^(\s*)/)?.[0] ?? "";
+            const leadingSpace = str.match(/^(\s*)/)?.[0];
             const result = str
                 .replace(/^(\s+)/, '') // Remove all space in front of text
                 .replace(/([a-z])([A-Z])/g, '$1-$2') // Convert camelCase to camel-case
@@ -16,5 +16,5 @@ export const kebabCase = (str: string): string => {
                 .toLowerCase();
             return leadingSpace + result;
         })
-        .join('\n') ?? '';
+        .join('\n');
 };

@@ -4,7 +4,7 @@
 export const snakeCase = (text: string): string => {
     return text.split('\n')
         ?.map((str) => {
-            const leadingSpace = str.match(/^(\s*)/)?.[0] ?? "";
+            const leadingSpace = str.match(/^(\s*)/)?.[0];
             const result = str
                 .replace(/^(\s+)/, '')
                 .replace(/([a-z])([A-Z])/g, '$1_$2')
@@ -15,5 +15,5 @@ export const snakeCase = (text: string): string => {
                 .toLowerCase();
             return leadingSpace + result;
         })
-        .join('\n') ?? '';
+        .join('\n');
 };

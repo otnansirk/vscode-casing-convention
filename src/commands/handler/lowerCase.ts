@@ -4,7 +4,7 @@
 export function lowerCase(str: string) {
   return str.split('\n')
     ?.map((str) => {
-      const leadingSpace = str.match(/^(\s*)/)?.[0] ?? "";
+      const leadingSpace = str.match(/^(\s*)/)?.[0];
       const result = str
         .replace(/^(\s+)/, '')
         .replace(/([a-z])([A-Z])/g, '$1 $2')
@@ -12,5 +12,5 @@ export function lowerCase(str: string) {
         .toLowerCase();
       return leadingSpace + result;
     })
-    .join('\n') ?? '';
+    .join('\n');
 };
