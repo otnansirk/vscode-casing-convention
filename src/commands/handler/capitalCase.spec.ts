@@ -1,7 +1,7 @@
 import { strictEqual } from "assert";
 import { capitalCase } from "./capitalCase";
 
-describe('CapitalCase', function() {
+describe('CapitalCase', function () {
 
   const TEST_CASES = [
     {
@@ -20,10 +20,16 @@ describe('CapitalCase', function() {
       input: "KRIS_HowAreYOU",
       expected: "Kris_howareyou"
     },
+    {
+      input: `  Have - holan : network
+      oke bos`,
+      expected: `  Have - Holan : Network
+      Oke Bos`
+    },
   ];
 
-  TEST_CASES.forEach(({input, expected}: any) => {
-    it(`Sould convert ${input} to ${expected}`, function() {
+  TEST_CASES.forEach(({ input, expected }: any) => {
+    it(`Sould convert ${input} to ${expected}`, function () {
       let result = capitalCase(input);
       strictEqual(result, expected);
     });
