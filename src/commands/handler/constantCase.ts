@@ -1,5 +1,3 @@
-import { constantCase as toConstantCase } from 'change-case';
-
 /**
  * Transform text to CONSTANT_CASE
  */
